@@ -1,0 +1,9 @@
+%article
+  #content
+    %header
+      %time{:datetime => posting.created_at, :pubdate => true}= posting.created_at.strftime("%b %d, %Y")
+      %br
+      =raw posting.categories.collect {|cat| link_to cat.name, postings_path(:category => cat.name) }.join(' | ')
+    %h2= link_to posting.title, posting
+    %p
+      =raw posting.summary

@@ -1,0 +1,28 @@
+= form_for @posting do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :summary
+    %br
+    = f.text_field :summary
+  %p
+    = f.label :status
+    %br
+    = f.text_field :status
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body
+  %p
+    = f.label :counter
+    %br
+    = f.text_field :counter
+  %p
+    = f.label :user_id
+    %br
+    = f.text_field :user_id
+  %p
+    = f.submit

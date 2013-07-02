@@ -1,0 +1,9 @@
+= semantic_form_for @posting do |form|
+  - form.inputs do
+    = form.input :title
+    = form.input :summary, :input_html => { :rows => 4 }
+    = form.input :body, :input_html => { :class => "mceEditor" }
+    = form.input :status, :as => :select, :collection => Posting::STATUS
+    = form.input :categories, :as => :check_boxes
+    = form.input :created_at, :as => :string
+  = form.buttons

@@ -1,0 +1,19 @@
+%header
+  = link_to "", root_path, class: 'home_link'
+  %nav
+    %ul
+      %li= link_to 'about', about_path
+      %li= link_to 'archives', archives_path
+      %li= link_to 'contact', new_contact_form_path
+        
+  - if logged_in?
+    %nav
+      %ul
+        %li Admin
+        %li= link_to 'POSTINGS', admin_postings_path
+        %li= link_to 'Comments', comments_path
+        %li= link_to 'logout', logout_path
+        %li &nbsp;|&nbsp;
+        
+
+

@@ -1,0 +1,557 @@
+=======================================
+install rails 3 and create project
+  $ rvm update # update rvm itself
+  $ rvm reload
+  $ rvm list
+  $ rvm remove 1.9.2-preview1
+  $ rvm install 1.9.2
+  $ rvm 1.9.2
+  $ ruby -v
+  $ rvm 1.9.2 --default
+  $ gem install rails
+
+  $ rails new vapor
+  $ cd vapor
+
+  $ bundle install
+  $ rails server
+
+initial gems bundle
+  Gemfile
+      gem 'haml'
+      gem 'compass'
+      gem 'compass-susy-plugin'
+      gem 'formtastic', '~> 1.1.0'
+      gem 'authlogic'
+      #gem 'inherited_resources'
+      
+      group :development, :test do
+        gem 'nifty-generators'
+        
+        gem 'capybara'
+        gem 'database_cleaner'
+        gem 'cucumber-rails'
+        gem 'cucumber'
+        #gem 'rspec-rails'
+        gem 'spork'
+        gem 'launchy'    # So you can do Then show me the page
+        
+        gem 'rspec-rails', '2.0.0.beta.22'
+      end
+
+      
+      
+  $ bundle install
+  
+setup
+  # assume sqlite
+  $ rake db:create 
+  
+  $ rm public/index.html 
+
+http://github.com/aslakhellesoy/cucumber-rails
+  
+  $ rails g cucumber:install --help
+  
+  $ rails g cucumber:install --rspec --capybara
+  
+  $ rails g rspec:install
+  
+  
+http://github.com/justinfrench/formtastic
+
+  $ rails g formtastic:install 
+
+http://haml-lang.com/
+
+http://compass-style.org/
+http://wiki.github.com/chriseppstein/compass/susy-documentation
+
+  $ compass init rails . -r susy --using susy/project 
+
+http://github.com/ryanb/nifty-generators
+
+  $ rails g nifty:layout --haml  
+  $ rails g nifty:authentication --haml --authlogic --rspec
+  
+  add to seeds.rb
+      User.create(:username => "admin", :password => "secret", :password_confirmation => "secret", :email => "jonathan@linowes.com")
+      
+  
+  $ rails g nifty:config
+
+  add these lines to the head of your layouts:
+      %head
+        = stylesheet_link_tag 'compiled/screen.scss', :media => 'screen, projection'
+        = stylesheet_link_tag 'compiled/print.scss', :media => 'print'
+        = stylesheet_link_tag 'compiled/ie.scss', :media => 'screen, projection'
+
+convert to jquery
+  $ rake rails:template LOCATION=http://github.com/lleger/Rails-3-jQuery/raw/master/jquery.rb
+
+add to config/application.rb
+  # autoload lib modules
+  config.autoload_paths << "#{config.root}/lib"
+  
+
+---------------
+
+  $ rails g nifty:scaffold posting title:string summary:text status:string body:text counter:integer user_id:integer --haml --rspec
+  $ rake db:migrate
+  
+---------------
+initial layout
+
+  routes.rb
+      root :to => "posts#index"
+      
+  modernizer
+    ref: http://www.modernizr.com/
+    download into public/javascripts
+    layouts/application.html.haml
+        %html.no-js
+        = javascript_link_tag 'modernizr-1.5.min'
+
+  application.html.haml
+  use susy in screen.scss (and _base.scss)
+  
+---------------
+export/import postings from xar vaporbase
+
+  ~/Sites/vapor121
+      this is the live vaporbase, ported to Xaraya 1.2.1 (from 1.1.1)
+          tried to get it going in php5 but full site still has problems (actually, seems fine except short urls)
+          so using MAMP, run it under php4
+
+  run http://localhost:8888/export_postings.php
+      generates postings.csv
+      copy csv to ~/rails/vapor/
+  
+  write rake task for import
+  write import method in models/posting.rb
+      
+  to drop, re-create and setup database (DESTRUCTIVE)
+    $ rake db:reset
+  or if my schema changed a back migration
+    $ rake db:drop
+    $ rake db:create
+    $ rake db:migrate
+    
+    $ rake vapor:import
+    
+    Firefox Sqlite viewer, choose Reconnect Database to refresh
+    
+categories  
+    $ rails g nifty:scaffold category name:string --haml --rspec
+    setup for habtm in models, and
+    in migration
+        create_table :categories_posts, :id => false do |t|
+          t.integer :category_id
+          t.integer :post_id
+        end
+        
+        
+frontpage
+    templates
+    
+    
+switch to blueprint
+  $ compass init rails . --using blueprint/semantic --force
+  remove from config/compass.rb
+    require 'susy'
+    
+  notes:
+      setup grid in _base.scss
+      remove scaffold from _page.scss
+      in _page.scss remove body.bp, put includes at top level
+        @include blueprint-typography;
+        @include blueprint-utilities;
+        @include blueprint-debug;
+        @include blueprint-interaction;      
+    
+pagination
+  ref: http://github.com/mislav/will_paginate/wiki
+  Gemfile
+    gem "will_paginate", "~> 3.0.pre2"
+  posting.rb
+    cattr_reader :per_page
+    @@per_page = 10
+  controller
+    @postings = Posting.paginate :page => params[:page], :order => 'created_at DESC'    
+  view
+    = will_paginate @postings 
+  
+status
+  add published scope to posting model, and use it in controller
+
+category filter
+  add :category param to controller, and pass it in link_to in aside nav
+
+preserve xar urls
+  change the export_postings.php to generate the xar url for us
+  
+  Gemfile stringex
+  add a url column to posting
+  posting acts_as_url (wont overwrite imported urls but will generate new ones), and def to_param
+  controller uses find_by_url
+  import needs to remove dots from url
+  fancier: http://github.com/Sutto/pseudocephalopod
+  [word is stringex is broken in rails3 ?!!?]
+  simple and nicer? http://github.com/bkoski/slug
+  
+show posting view
+  html5 strcture
+  body_id for different banner image from frontpage
+      ref http://www.themomorohoax.com/2009/02/21/on-css-5-tips-for-rails-developer-sanity
+      
+authentication
+  gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+  logged_in filters, views
+
+views counter (non-admin)
+  @posting.increment!(:counter) unless logged_in?
+  
+exception handling
+  ref http://guides.rubyonrails.org/action_controller_overview.html#the-default-500-and-404-templates
+  be sure all finds use ! to raise exceptions (Posting.find_by_url!)
+
+create/edit postings
+  tinymce
+      http://github.com/kete/tiny_mce
+      Gemfile
+          gem 'tiny_mce'
+      postings_controller
+          uses_tiny_mce
+      form body field
+          :class => "mceEditor"
+      application layout
+          = include_tiny_mce_if_needed
+  
+simple_form
+  http://railscasts.com/episodes/234-simple-form
+  http://github.com/plataformatec/simple_form
+  Gemfile
+      gem 'simple_form'
+  styles
+  rails generate simple_form:install
+  
+  minor fixes to _form.html.haml
+
+about
+
+contact
+  http://railscasts.com/episodes/219-active-model
+  http://forrst.com/posts/Contact_form_using_Active_Model-u1G
+  http://www.railsmine.net/2010/03/rails-3-action-mailer-example.html'
+  also instead see mail_form gem, has simple captcha trick
+    http://github.com/plataformatec/mail_form
+  
+  $ rails g mailer notifier
+  config/application.rb
+    ...
+  $ rails g resource contact_form
+    rm the migration
+    in mailer/notifier.rb
+      def contact_form(sender)...
+      also can set defaults
+    create views (contact_form.html.haml, contact_form.text.haml)
+    in routes.rb
+      resources :contact_forms, :only => [:new, :create]
+    in contact_forms_controller.rb
+      def new
+      def create (calls @contact_form.save)
+    in models/contact_form.rb
+      validations...
+      def initialize...
+      def read_attribute_for_validation...
+      def persisted?...
+      # convenience accessors
+      def to
+      def from
+      # use save to send, so the validations get called etc
+      def save
+        if valid?
+          Notifier.contact_form(self).deliver
+        else
+          return false
+        end
+      end
+    
+debugger
+  gem "ruby-debug19"
+  rails s --debugger
+ 
+comments
+  export comments from xar vaporbase
+    $ rails g nifty:scaffold comment title:string body:text author:string status:string anonymous:boolean post_id:integer --haml --rspec
+
+  model associations
+  import
+    rake
+    model function
+  
+  routes.rb
+  show views
+  
+  user create comments
+    
+  admin comments
+      delete
+      edit
+      
+  markdown
+    Gemfile
+        gem 'rdiscount'
+    application_helper.rb
+        def sanitized_markdown(content)
+          RDiscount.new(h content).to_html.html_safe
+        end
+    comments/_comment.html.haml
+        ...
+        = sanitized_markdown comment.body
+
+legacy xar media
+  note: vaporbase did not use the uploads or images modules
+  copy /xarvapor/var/uploads to public/uploads
+  routes.rb
+      # static xar uploads e.g. "var/uploads/Image/fields.jpg" => /postings/var/uploads...
+      match "/postings/var/uploads/:dir/:file.:ext" => redirect("/uploads/%{dir}/%{file}.%{ext}")
+      
+  
+search
+
+comments author export bug (need to export author name)
+      
+git
+  $ git init
+  .gitignore (for now)
+      public/uploads/*
+  $ git add .
+  $ git commit -m "first commit"
+  
+
+deploy
+  signup heroku (jonathan@parkerhill.com / lisa577)
+  $ gem install heroku
+  $ heroku keys:add
+  $ heroku create
+  http://stormy-light-79.heroku.com/
+  $ git push heroku master
+  
+  $ heroku stack:migrate bamboo-mri-1.9.2
+  $ git push heroku master
+  (errors)
+  
+  try ruby 1.8.7
+  $ rvm install 1.8.7
+  $ rvm 1.8.7 
+  $ bundle install
+  $ gem install heroku
+  $ heroku stack:migrate bamboo-ree-1.8.7
+  adjust gems in Gemfile
+  change to FasterCSV in posting.rb and comment.rb (and Gemfile)
+  $ git commit -a -m "1.8.7"
+  $ git push heroku master
+  
+  build the database
+  $ heroku rake db:migrate
+  $ heroku rake vapor:import
+  $ heroku rake vapor:comments
+  
+  for some reason, seeds.rb doesnt get run so
+  $ heroku console
+  
+  compass support
+  ref http://lds.li/post/673242899/compass-with-rails-3-on-heroku
+    edit config/compass.rb
+    edit config/initializers/compass.rb
+    Dont bother for now, only needed if/when dont precompile scss before deploying
+  
+
+s3 account
+  sign up
+  https://console.aws.amazon.com/s3/home
+    create a bucket: vaporbase
+    upload files
+  write uploads_on_s3 helper to change links in content (could be a model filter but decided to use a helper)
+    still need routes redirect is anyone (google images) has direct link but otherwise this avoids the redirect
+  tested and works for videos :)
+  
+
+custom domain on heroku
+  add custom domain addon
+  
+  in verio control panel, DNS Information Service for vaporbase.com
+      www     CNAME   proxy.heroku.com.      1 hour
+      
+      @       A       75.101.163.44
+      @       A       75.101.145.87
+      @       A       174.129.212.2
+      
+  MX record pointing to verio (wont let me put ip directly so create mail. subdomain)
+      verio   A       128.241.53.22
+      @       MX      verio.vaporbase.com.
+      
+  (can also change others to verio.)
+  
+  $ heroku domains:add www.vaporbase.com
+  
+  check it:
+  $ host www.vaporbase.com
+  
+  
+  point verio dns to ...
+  
+------------------------
+12/4/2010
+  $ git remote rm heroku
+  $ git remote add heroku git@heroku.com:vaporbase.git
+  
+
+1/5/2011
+  bug in production creating postings
+    i get this error on my heroku site, same works fine on my dev machine 
+    in both development and production environment https://gist.github.com/c801b9620970e9744dbf
+    
+    http://stackoverflow.com/questions/4172576/duplicate-ids-being-generated-violating-primary-key-contraints
+    
+    $ heroku console
+    >> Posting.last(:order => 'id').id
+    => 212
+    >> ActiveRecord::Base.connection.execute "SELECT setval('postings_id_seq', 1000);"
+    => #<PGresult:0x2ab2299538b8>
+    
+  added Postings admin page
+  
+  added new_comment notifier
+  
+  captcha
+    gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
+
+    $ sudo port selfupdate
+    $ sudo port install ImageMagick
+      requires https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20719
+    
+    $ rails generate simple_captcha
+    $ rake db:migrate
+    ApplicationController < ActionController::Base
+      include SimpleCaptcha::ControllerHelpers
+    in view
+      = form.simple_captcha
+    edit
+      /app/views/simple_captcha/_simple_captcha.erb
+      
+    
+undo until install
+  Gemfile
+  application_controller.rb
+  comments_controller
+  comments/_new
+  
+$ heroku addons:add pgbackups:basic
+$ heroku pgbackups:capture
+to download
+$ heroku pgbackups:url b001
+
+  $ heroku rake db:migrate
+  $ heroku restart
+  
+    
+gem 'rmagick', "2.12.0", :require => 'RMagick' 
+
+params = ["-fill darkblue", "-background white", "-size 100x28", "-wave 0x88", "-gravity 'Center'", "-pointsize 22", "-implode 0.2", "label:KCPDV"]
+
+
+4/1/2011
+  $ heroku addons:add logging:basic --app vaporbase
+  
+========================
+========================
+========================
+========================
+bad url slugs 
+  /postings/Funniest_pictures_i%27ve_seen_in_a_long_time
+  
+set category in new/create edit/update
+
+rss feeds
+  rails way
+  xar compatiblity
+  
+
+attachments in new articles
+  [not paperclip]
+  tinymce file and image plugins - direct upload to s3
+  
+  
+edit "Save & Continue"
+
+
+syntax highlighter in postings
+
+
+facebook Like
+
+
+textmate
+  scss
+  haml
+  
+  
+mobile version
+  use jquery mobile
+  
+
+testing
+  cucumber scenarios
+  rspecs
+  javascript test rig
+
+=======================================
+      
+---
+
+
+
+  ruby script/rails generate cucumber:feature post title:string body:text published:boolean
+  ruby script/rails generate scaffold post title:string body:text published:boolean
+  rake db:migrate
+  rake cucumber
+  
+
+---
+  config/application.rb:
+
+      config.generators do |g|
+        g.test_framework :rspec
+      end
+
+---
+==============
+jquery and jquery ui
+
+
+============================================
+RUBY/RAILS NOTES
+
+.map(&:name) 
+
+rails console
+  to see routes
+      > include ActionController::UrlWriter
+      > default_url_options[:host] = 'whatever'
+  to use helpers
+      > helper.link_to 'asfd',posting_path(p)
+      
+
++++++++++++++++++++++++++++++++++++++++++++++
+migrate to cedar
+https://devcenter.heroku.com/articles/cedar-migration
+
+git push heroku-cedar cedar:master
+heroku run rake assets:precompile --app cedar-vapor
+
+heroku pgbackups:capture -a vaporbase --expire
+heroku pgbackups:restore HEROKU_POSTGRESQL_BLUE -a cedar-vapor  `heroku pgbackups:url -a vaporbase`
+
+heroku logs --app cedar-vapor --tail

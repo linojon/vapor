@@ -1,0 +1,1390 @@
+article_id,article_url,title,datetime,text,author_id,author,status,postanon
+212,Replaceable_render_engines_for_Formtastic,"Formtastic Feedback?",1269141729,"This looks pretty cool and addresses my frustration with Formtastic.  What feedback have you gotten from the Formtastic maintainers/community?",2,Jeff,2,0
+212,Replaceable_render_engines_for_Formtastic,"Replaceable render engines for Formtastic",1269181431,"No feedback yet, and I'd love to see more discussion. But I know they're focusing on getting to 1.0, so I understand if the refactoring required to implement this is outside the scope of the current project. I do plan to continue to merge any updates on Formtastic master to my branch, and ensure we pass all the master rspecs.",3,linoj,2,0
+212,Replaceable_render_engines_for_Formtastic,"Replaceable render engines for Formtastic",1269229943,"Okay, this is awesome. No idea when we'll merge this in, but this is definitely where we want to go.  Great work, Justin.",2,"Justin French",2,0
+212,Replaceable_render_engines_for_Formtastic,"new :structure option",1270050498,"NOTE: you can now do form.inputs :structure => :inline instead of the :partial option on inputs and input, and it'll automatically prepend 'inline_' to the partial names it looks for ('_inline_fields', '_inline_input' etc).",3,linoj,2,0
+212,Replaceable_render_engines_for_Formtastic,"Replaceable render engines for Formtastic",1277339309,"You sir, are a genius. Love your work! Thank you, thank you, thank you.",2,Dom,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"Gridify - A Ruby wrapper and Rails plugin for jqGrid",1263899765,"hello 
+
+can i use the will_paginate plugin ? ",2,guest,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"Gridify - A Ruby wrapper and Rails plugin for jqGrid",1263916259,"<p>hi, if you want to use will_paginate then dont use the #find_for_grid method. Instead you'll need to inerpret the params passed by jqgrid in your controller. </p>
+<p>But I'm not sure why you'd want to use will_paginate. find_for_grid does pagination, and with jqgrid you dont use the will_paginate view helpers.</p>",3,linoj,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"Gridify - A Ruby wrapper and Rails plugin for jqGrid",1269933875,"Thanks for the awesome  work.
+
+Is there any way to use inline edit with this plugin?",2,Satish,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"Gridify - A Ruby wrapper and Rails plugin for jqGrid",1269960265,"@satish I havent added inline edit to the ruby wrapper so you'd just call it directly as described in the jqgrid docs. ",3,linoj,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"Gridify - A Ruby wrapper and Rails plugin for jqGrid",1273561993,"Hi Linoj,
+I have been playing with the plugin with the example 2. However I get an error with the last statement in the method index of the controller
+*****begin
+ @grid = Note.grid :mylist
+***end
+error****
+wrong number of arguments (1 for 0)
+end*****
+I put a comma before :mylist. the error didnot show anymore but the grid is not showing as well
+Thanks for your help
+",2,omar,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"Feature Request",1275345827,"Hey, thanks for the plugin, works great for some things I need.
+
+I do, however, have a feature request. I am looking into adding it myself, but I am a ruby nubi. I would like to somehow specify it to be able to lookup relations and display their data. For ex:
+
+I have a table for Users and their favorite colors are listed in Colors. The Users has a color_id column to link it. Currently it will just display the value of color_id. I would like for it to show color_id.name instead. Not sure how hard this would be to add, but if you can steer me in the right area of your code to try to add something like this, I would appreciate it.",2,Eric,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"Re: Feature Request",1276572863,"Did you get a response to this? Now that my grid is working, I have a couple of different relations I'd like to indicate on the grid. Alternatively I'd like to add a column which let the user go to a full edit page for the row, as I already have the relationships working there.",2,Anita,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"pluralize and tableize seem to get the name wrong",1276053678,"Hi, I am trying to implement gridify on a fairly simple application.
+The first thing I'm trying to gridify is called 'person' and has a table name of people. Gridify tries to turn this into peoples, so the js includes this:
+jQuery(document).ready(function(){ grid = jQuery(""#peoples_grid"").jqGrid({""url"":""/peoples"",""restful"":true,""postData"":{""gri d"":""grid""},..... etc
+but there is no url called /peoples, just one called people.
+Any thoughts on this?
+
+thanks, Anita",2,"Anita Graham",2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"basic ununderstanding here: can you help?",1276239382,"As mentioned in my previous post I am trying to gridify a table called People, which has persons as records. Having 'fixed' the previous problem (by removing one of tableize and pluralize) I have a very basic problem: no data gets added to my grid.
+1. The grid appears on the page
+2. The pager has the correct information in it: I return 49 records and the pager indicates that it is page 1 of 5. If I change the rows/page, the pager changes the total number of pages.
+BUT
+3. The rhs of the pager says 'No records to view'.
+4. Using Firebug I can see my data returned as XML in the Response.
+
+What happens to it after that? 
+
+I can't seem to track down what is going on after that.
+
+THank you for any insight you can offer.
+
+Anita",2,"Anita Graham",2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"Problem solved...",1276500432,"I fixed my own problems in the end. They were all related to the pluralize.tableize issue (which I think is still an issue), but after that it was all to do with me.  
+
+Thanks for Gridify, which is now making my page look beautiful.",2,Anita,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,relations,1276579418,"How does gridify deal with simple relationships like ""has one"" and ""belongs to""?
+",2,Anita,2,0
+210,Gridify_-_A_Ruby_wrapper_and_Rails_plugin_for_jqGrid,"Gridify - A Ruby wrapper and Rails plugin for jqGrid",1276610766,"Hi Anita, I'm on vacation through next week and we can have a conversation after that about your questions. And feel free to email me directly rather than using these comments :) jonathan at parkerhill com",3,linoj,2,0
+209,jqGrid_for_RESTful_Rails,"jqGrid for RESTful Rails",1279884265,"Have these changes been committed to the jqGrid project yet?",2,stevev,2,0
+204,stack_level_too_deep,"stack level too deep",1255520435,"Very helpful pointer, thanks.",2,"Uri Lewin",2,0
+201,SaasRamp_Screencast,"SaasRamp Screencast",1253919627,"<p>by the way, if you're using the state_machine gem you'll need to use this fork (at least until it gets merged)</p>
+<pre>
+http://github.com/joelind/state_machine/commit/50aa5d730c9f244e2914ab36d0f89b07f   5f3d8a5
+</pre>
+<p>
+Just add to environment.rb:</p>
+<pre>
+config.gem 'joelind-state_machine', :lib => ""state_machine"", :source => ""http://gems.github.com""
+</pre>",2,"joe ",2,1
+201,SaasRamp_Screencast,"SaasRamp issue",1257351820,"Hello Jonathan ,
+
+im integrating your plugin saasramp and i found a issue , when i pay for a plan , i get a descresing balance when and i switch to a lower plan , and then to a higer plan , and so on... is this a expected behavior ?
+
+cheers",2,miguel,2,0
+201,SaasRamp_Screencast,"Re: SaasRamp issue",1257569323,"Hi miguel, yes it's the expected behavior if the subscription is active (not in trial), and time has passed between the changes. When you change plans, the unused value (from now to the end of the paid period) is prorated; then the new plan begins from now. 
+
+If you are seeing something different, feel free to email me directly. If you could modify the subscription_spec.rb to demonstrate the problem, that's be great.
+
+Thanks and good luck.",3,linoj,2,0
+201,SaasRamp_Screencast,"SaasRamp Screencast",1267326121,"I'm trying to use saasramp to my existing rails app, but I try to use it with ActiveMerchant 1.5.1, but when I run saas_migration I get these errors.
+
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/gem_dependency.rb:119:Warning:  Gem::Dependency#version_requirements is deprecated and will be removed on or after August 2010.  Use #requirement
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies. rb:440:in `load_missing_constant': uninitialized constant ActiveMerchant::Billing::PayflowCommonApiGateway (NameError)
+
+Seems to work okay with ActiveMerchant 1.4.1 though.  Any ideas how to correct this so I can use the newer version of ActiveMerchant?",2,Zack,2,0
+201,SaasRamp_Screencast,"SaasRamp Screencast",1267328222,"Fixed the first error by editing line 119 of gem_dependency.rb
+
+     def requirement
+r = Gem::Dependency.instance_methods.include?(""requirement"") ? super : version_requirements
+       (r == Gem::Requirement.default) ? nil : r
+     end
+
+But, I still can't get the migrations to run because of the Payflow error.",2,Zack,2,0
+197,Husage%3A_A_Better_HughesNet_Usage_Report,"Husage: A Better HughesNet Usage Report",1251606931,"AMAZING! Thank you so much. I hate the FAP, or Unfair Access Policy as I call it. This is truly a godsend. Thank you thank you thank you.",2,Jays,2,0
+196,iMac_disk_died,"iMac disk died",1264184872,"Interest blog.  I'm curious why you didn't use Time Machine with the WD ""My Book""?  I've read some posts that indicate the iMac sleep mode doesn't agree with the WD drive.  ",2,"Gene Martin",2,0
+196,iMac_disk_died,"iMac disk died",1264427170,"Hi, I'm using Time Machine now, since I upgraded to Snow Leopard.",3,linoj,2,0
+195,ReviewRamp_Beta_Escapes%21%21,"ReviewRamp Beta Escapes!!",1246286519,"congrats jon!",2,nap,2,0
+193,BaseWithoutTable,BaseWithoutTable,1237404175,"<p>
+This is a pretty cool plugin and I like the elegancy of the solution.
+</p><p>
+However, I noticed that git repo version doesn't seem to support AR::Base callbacks (e.g. after_save). I fixed the issue in my fork, which you're welcome to use: http://github.com/ratnikov/active_record_base_without_table/tree
+</p><p>
+ I have also fixed the test suite to actually run, changed to use sqlite3 by default (rather than mysql), and added a gem spec.",2,"Dmitry Ratnikov",2,0
+191,Self_image,"Self image",1233500070,"uh-oh!  I'm about ten years older than you -- do I look like that????",2,Joanie,2,0
+191,Self_image,"Self image",1233516610,"What mirror? I don't see any mirror... and anyway, who are you and why are you sitting next to me???",2,David,2,0
+191,Self_image,"Self image",1235072422,"Interesting how what makes us laugh or smile says a lot about the ""truths"" we accept, whether these are assumptions that in ten years we'll look worse or (much) better :) Good stuff.
+
+Btw, I landed on your page thanks to your excellent summary of Crossing the Chasm. Very interesting book; thanks for producing and publishing a summary. And if you're really interested in how the result came up on Google, it was because I searched for ""tech adoption profiling"".
+
+Best regards,
+
+alex :)
+http://blog.businessquests.com
+
+PS: your test against bots does not accept the answer ""seven"" and instead wants ""7"", why so?",2,alex,2,0
+190,My_NH_Ruby_Presentation,"My NH Ruby Presentation",1232151335,"Re: Slide 10 in your Cucumber presentation:
+
+I think it woudl be better to use (?: ) for the first grouping to avoid capturing a phrase you don't use.  I also find that as you get more and more steps you will find that phrases like 'a ""bar"" link'  will start to conflict with each other.  My suggestion is ot make every phrase an independent clause with a clear subject and action.
+
+Just my thoughts",2,"Antares Trader",2,0
+190,My_NH_Ruby_Presentation,"My NH Ruby Presentation",1232200288,"Antares: thanks for the feedback. I've had pretty good luck with phrases like 'a ""bar"" link', because although short, it's tightly constrained by the quotes-space-'link'-end of line match.",3,linoj,2,0
+188,Show_me_the_response,"Show me the response",1230402389,"Cool stuff. You should use this instead: http://github.com/brynary/webrat/tree/master/lib/webrat/core/save_and_open_page. rb",2,"Aslak Hellesøy",2,0
+188,Show_me_the_response,"Show me the response",1230474244,"Thanks Aslak, you're right, in general. Now I recall why I had to do it this way. The webrat method rewrites the url's for css and img assets. This doesnt work for me, as in some cases, my app goes through controllers for these. I have dynamic css (with embedded erb). And on some pages images go through a controller for authorization and protected access. So I need to put the response html file under public and bring it up through my  server process, rather than opening a local file in a tmp directory.",3,linoj,2,0
+185,Eat_Gooey_Cookies,"Eat Gooey Cookies",1228722453,"Nice article. ",2,Maurizio,2,0
+180,Render_collection_with_layout,"Render collection with layout",1222876358,"What version of rails does this apply too?  When I call <%= render :partial =>, :collection =>,  :layout => -%> I don't get results like you describe.  I get the layout applied once around the collection (the way you describe the rails default behavior) but the whole thing is repeated for each entry in the collection.",2,"Garrett Berneche",2,0
+180,Render_collection_with_layout,"Render collection with layout",1229180197,"Thanks for this, very useful, but I noticed it seems to ignore the :as option, so I have extended it to use this as well:
+
+def render_collection_with_layout( options )
+    collection = options.delete(:collection)
+    locals = options.delete(:locals) || {}
+    as = options.delete(:as)
+    collection.collect do |object| 
+      locals = locals.merge(as => object) if as
+      render options.merge(:object => object, :locals => locals)
+    end.join",2,MrJaba,2,0
+178,Journey_to_the_Center_of_the_Earth_and_Back_in_One_Day,"Journey to the Center of the Earth and Back in One Day",1220497499,"Nice article!",2,Leon,2,0
+176,Refactoring_your_messes,"Refactoring your messes",1220042643,":)
+
+",2,Maurizio,2,0
+175,Find_in_textmate,"Find in textmate",1224775003,"for dating ",2,"richelle ",2,0
+175,Find_in_textmate,"Re: Find in textmate",1264246438,"eow  guyyz msssssssssssssssta poh hanap lng po textmate mbait at humble cute",2,paul,2,0
+174,alias_method_chain_in_a_module,"alias method chain in a module",1218215678,"Happy to see you have begun posting again ... :)
+",2,Maurizio,2,0
+174,alias_method_chain_in_a_module,"alias method chain in a module",1220509271,"exactly what i need! thanks for the great post. 
+- sandeep",2,Anonymous,2,0
+174,alias_method_chain_in_a_module,"Saved my bacon",1220944043,"Thanks for this -- it's exactly what I was looking for. :)",2,Foliosus,2,0
+174,alias_method_chain_in_a_module,"and for instance methods...",1269019878,"      base.class_eval do
+        extend ClassMethods
+        alias_method_chain :link_to, :authentication
+      end
+
+(leaving off the class << self ... end)",2,korinthe,2,0
+174,alias_method_chain_in_a_module,"formatting lost",1269019960,"And for instance methods...
+
+      base.class_eval do<br/>
+        extend ClassMethods<br/>
+        alias_method_chain :link_to, :authentication<br/>
+      end<br/>
+
+(Leaving off the class << self ... end)
+",2,korinthe,2,0
+170,Surgery_and_prognosis,"Surgery and prognosis",1214450685,"Am reading this at Joanie's.  Knocked out by it all.  I love you.
+                        Mom",2,Anonymous,2,0
+170,Surgery_and_prognosis,"Surgery and prognosis",1214483070,"oh great, a personal comment from my mother. From My MOTHER! Now how am I gonna delete that??!!! :)",3,linoj,2,0
+170,Surgery_and_prognosis,"Surgery and prognosis",1215518367,"It's hard not to respond to in a personal way.
+
+So, impersonally, I'm glad your prognosis is good. As for the ""what now?"" maybe you should add more to Vaporware. How about: how to handle a typical landing page (featured content from multiple other pages and other resources, different look & feel from basic page)?
+
+:)",2,Dji,2,0
+170,Surgery_and_prognosis,"Thank you!",1216170548,"Hi,
+
+I stumbled upon your website in the midst of some Django development. I was really drawn in by your posts about your experiences with prostate cancer. I myself have a family history of prostate cancer.
+
+I just wanted to let you know that I really appreciate you sharing your story. I like that you kept what was important--your family--first. The best of luck moving forward.
+
+Mike
+",3,linoj,2,1
+169,prostate_cancer%21,"prostate cancer!",1214319601,"I've written a follow up article posted here http://www.vaporbase.com/postings/Surgery_and_prognosis ",3,linoj,2,0
+169,prostate_cancer%21,"Re: prostate cancer!",1266268318,"Thank you for sharing your story.  It makes it easier for others.
+God bless you!!",2,Jb,2,0
+169,prostate_cancer%21,"life lessons",1214402169,"Sometimes it takes a personal intense occurrance to remind us to be logical and not wallow in emotion, to count our blessings, and to remember that the field of medicine is really more of an art form than a science.  Positive attitude in all things is what keeps us going,",2,Joanie,2,0
+169,prostate_cancer%21,"prostate cancer!",1274826954,"My husband was diagnosed yesterday.Thanks for your story as his prognosis is similar to yours.
+I am hopeful now.",2,gw,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1214231799,"I've had some inquiries asking what this is about. Here's the link to the original article this references: http://weblog.jamisbuck.org/2006/10/18/skinny-controller-fat-model
+",3,linoj,2,0
+167,Fat_Model_-_Skinny_Controller,"Re: Fat Model - Skinny Controller",1259941551,"Your comments were painful to read.  This has nothing to do with modeling, but the Model View Controller. Hence the Ruby on Rails avatar at the top of the picture.. thank you, linoj, for spreading some light on this.",2,"ugh.. really?",2,0
+167,Fat_Model_-_Skinny_Controller,"Re: Fat Model - Skinny Controller",1280089028,"man im so fat i just cant loose it please help me",2,nadiya,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1227826456,"<a href=""http://yandex.ru/redir?url=http://www.ricovideo.ru"" target=""_blank"">работа девушкам моделям</a>",2,"Rico Video",2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1229173079,"IM SICK OF SKINNY MODELS BEING USED FOR THE LARGER WOMANS CLOTHING IT MAKES ME SICK TO SEE WOMEN WHO ARE ON THE VERGE OF BECOMING SIZE 0. WHAT MESSAGE DOES THAT GIVE TO YOUNGER KIDS?! ITS DISGUSTING IM SIC OF IT",2,Anonymous,2,0
+167,Fat_Model_-_Skinny_Controller,"Re: Fat Model - Skinny Controller",1258630485,"i bet your fat",2,Anonymous,2,0
+167,Fat_Model_-_Skinny_Controller,"Re: Fat Model - Skinny Controller",1261122223,"It's advertising. Clothes look better on small models. If the clothes look better, more people will want to buy the product. If more people want to buy the product then more money is made. It's simple and a business like any other.
+
+Also, designers usually make sample sizes that are usually 2-4. Models who are too small for this standard (aka on the verge of 0) aren't hired for campaigns, just as models who are too large aren't. It's the way the industry operates and always will...no matter how many ads Dove throws together (and even though the effort is appreciated).",2,Seriously?,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1230104835,"im 13 and i think im fat xD skinny controller is like a goal just not the slutty part",2,Anonymous,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1232665130,"i wish i could look like the skinny girl but how do i no if she has been airbrushed or not ??",2,nicola,2,0
+167,Fat_Model_-_Skinny_Controller,"Re: Fat Model - Skinny Controller",1236521762,"what diffrence does it make if she's been airbrushed or not?",2,Anne,2,0
+167,Fat_Model_-_Skinny_Controller,"Re(1): Fat Model - Skinny Controller",1257817893,"because if shes airbrushed, ten that means that shes not realy. so its like aspiring to look like a cartoon",2,jackie,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1234054135,"i am 14 and  i do part time modeling and i i weight 120 pounds and i was told to lose 10 pounds b/c they said i was getting fat. I don't think that is right i think they should have models with a little fat but in a healthy way. 
+",2,"does it matter?? ",2,0
+167,Fat_Model_-_Skinny_Controller,"Re: Fat Model - Skinny Controller",1236144946,"I agree completely. I wouldn't worry about an ounce. Try to live a healthy life and that's all you need.",2,Anonymous,2,0
+167,Fat_Model_-_Skinny_Controller,"Re: Fat Model - Skinny Controller",1249271533,"Wow, Ferreal? honestly love your fine just the way you are.. you are FAR from a little fat. i wish i was that much. ignore them.",2,Jessica,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1236144802,"Well, we have a bit of a problem. The push for girls to look like ""ideal"" models is strong. I have several friends that have been fighting eating disorders for over a decade (their age range is currently 24-29). At the same time the United States is (I think) THE most over weight country in the world. We have more health issues from being over weight than most people realize and some are willing to admit. Our lives are based around consumerism and  convenience. My personal tastes in women are irrelevant, but I think there are people who will be naturally thin just as there are also people who will be naturally large. It's when we destroy ourselves with our habits, weather based in indulgence or in vanity, that this lifestyle becomes an issue.",2,"Good Lord.....",2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1236522053,"i dun know what u r all talking about the ""skinny controler"" has a healthy weight, u can't see her bones and she even has some curves
+",2,x,2,0
+167,Fat_Model_-_Skinny_Controller,"Re: Fat Model - Skinny Controller",1239757654,"I totally agree X, the 'skinny"" one isnt all that skinny....she looks great and healthy. ",2,G,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1242760937,"i wish i could look like to skinny one.
+i wish i didn't look want to though.
+how does she get to be like that ?",2,"Wannabe kid",2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1242864327,"I'm a bit less fat than the first woman, and I think it's okay to be like this! I'm 19 and I have to say that everyone is beautiful in his/her own way.",2,K,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1243182749,"That ""skinny"" controller has a beautiful body... but her outfit is atrocious. ",2,"Obadi Obada",2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1248445325,"Hah, that's great.... especially the comments.",2,Dan,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1249722556,"honestly... i wish i was nether ... i wish we didnt have to fit into a stupid stereotype, yea im fat and i hate my self with every ounce of my soul, but that doesn't mean im going to let the stupid media tell me what i should look like ... i have issues with my body because im not healthy, but with the price of healthy foods i cant afford to eat well. i have to settle with the fast food way of life, because thats all a single mother can afford. im 16 and i cant do a damn thing to help my mother. im out of shape and poor and what can i do ? ... go to high school, hope that i dont kill my self because of being fat, so i can get a job and slave for a one bedroom apartment, and live off of 12 bucks an hour ... sounds like a great life.
+
+i hate skinny people, but i would kill to be one ... ",2,...,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1252989531,"this pic is my thinspiration. im on a 1 meal a day diet and im going weel YES! im so happy im actually losing weight. bt i'm still disgustingly fat. (i'm 1.56cm high and weigh 55kgs-gross i know.)",2,Sophi,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1259942261,"You teenage girls are all fat. go on a diet and stop eating so much fast food.",2,Anonymous,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1261121764,"I like how irrelevant the comments are to this but for the sake of joining in:
+
+Ew. First off the girl on the right isn't ""curvy"" she's just fat. Secondly the girl on the left is not too skinny you can tell by her arms. To fat people: stop saying idiotic things likes ""I hate skinny people"". Most people aren't naturally skinny and have to work hard to stay slim. I control my cravings and exercise everyday. It sucks sometimes but I don't have to make pathetic excuses for myself. So either do the same or stop bitching.",2,Anonymous,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1263266204,"Ooh this is so stupid! Beauty is in the eye of the beholder, isnt it??? I'm not fat but I'm chubby, and you know what? I dont care! I'm healthy and I have friends and a boyfriend who love me for who I am. The big model with the red bra looks happy. Let her be. The one with the whip is in control. Fearful, scary. It's bad. Just be how you were born~",2,Kat,2,0
+167,Fat_Model_-_Skinny_Controller,"Fat Model - Skinny Controller",1275331227,"You lot are sooo funny!!
+This had nothing to do with Fat/Skinny people, but everything to do with the Model View Controller or MVC for short.  
+IDIOTS!!",2,IDIOTS,2,0
+162,List_methods_for_nested_sets,"List methods for nested sets",1205164649,"The version at
+http://agilewebdevelopment.com/plugins/betternestedset 
+has all the methods listed above",2,"Dr. Serge",2,0
+162,List_methods_for_nested_sets,"List methods for nested sets",1205264674,"Actually, the SVN repository listed on that page (http://opensource.symetrie.com/svn/better_nested_set/trunk) is obsolete, and doesn't seem to contain these additions (at least, not in the trunk).  As the first comment on that page indicates, the real, up-to-date repository can be found on RubyForge at:
+
+http://rubyforge.org/scm/?group_id=2290
+
+(Where it looks like Tim Olsen and a number of other developers have thoroughly overhauled the plugin.)
+
+A casual glance indicates that /tags/release-1.0 and /tags/stable don't contain these changes, but /trunk does, mainly as method aliases.  (For instance, higher_item is an alias for previous_sibling, last? is an alias for last_sibling? etc.)",2,"Joseph Riesen",2,0
+159,link_to_tag_current,"great web",1222930024,"nice blog, thanks
+<a href=""http://forums.ipodhacks.com/showpost.php?p=119421&postcount=2"">buy diflucan</a>",2,Anonymous,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1203761859,"This is good, thank you! I'll leave you a lethal comment next time. :)",2,Ian,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1204287715,"thank you for this patches, but I still cannot get it working. I also applied the patches for the protect_from_forgery bug (http://dev.rubyonrails.org/ticket/10055) but still get InvalidAuthenticityToken
+
+this is my view:
+
+<% for context in @contexts %>
+<% @context = context %>
+  <tr>
+    <td><%= in_place_editor_field :context , :name %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%= will_paginate @contexts %>
+",2,Sven,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1204303387,"Sven, i just found an alternative solution to mine, posted within days of this post, which may play better with the 2.0 forgery stuff 
+http://www.bizmeetsdev.com/articles/2008/02/09/editable_content_tag",3,linoj,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1204693902,"I'm adding this note (found on the rails wiki) although I havent tried it or integrated it into the helper: 
+
+""In rails 2.0, if you’re trying to submit some crazy AJAX you’ve coded manually and you’re getting an Invalid Authenticity Token error, be sure to add the following to the query string of parameters being submitted:
+
+&authenticity_token=<%= form_authenticity_token %>
+
+form_authenticity_token will generate a valid token that rails needs to validate the request.",3,linoj,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1205864638,"I just tried adding the authenticity_token to the string as you described above, and it works perfectly now.  A heck of a lot easier than the alternatives.  Any known security issues?
+
+Anybody else wonder why in_place_editor would be considered ""crazy AJAX"" ?  Seems pretty mainstream to me...",2,Ken,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1207974241,"Take a look at http://dev.rubyonrails.org/ticket/10055 for an alternative solution for this problem.",2,Brian,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1214101860,"Nice patch, but there is a problem with multi-bytes characters in the value. It could be avoided by using encodeURIComponent() instead of escape().
+- js_options['callback']   = ""function(form,value) { return '#{options[:as]}=' + escape(value) }"" if options[:as]
++ js_options['callback']   = ""function(form,value) { return '#{options[:as]}=' + encodeURIComponent(value) }"" if options[:as]
+
+",2,Hiroshi,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1214258690,"Can you help explain the last line in your controller?  
+
+render :text => self.class.attributes.include? attribute ? @foo[attribute] : '(bad attribute)'
+
+This doesn't even allow the page to load for me, and I'm trying to figure out what we're actually doing and what I need to change for my situation.  I basically just changed @foo to @contact, but I think I'm missing something.",2,Nick,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1228997337,"Thank you for the patch.
+
+As far as I can tell your line in the in_place_editor helper overwrites any existing js_options['callback']  as for example introduced when applying the patch http://dev.rubyonrails.org/ticket/10055. 
+
+Using the following gets rid of that:
+
+<pre>if options[:as]
+      options[:with] ||= ""Form.serialize(form)""
+      options[:with] += "" + '&#{options[:as]}=' + encodeURIComponent(value)""
+    end
+</pre>",2,Biggles,2,0
+158,Restful_In_Place_Editor,"Re: Restful In Place Editor",1229003364,"Handling the data with RJS still raises the problem that after updating the value, the javascript of the RJS is displayed instead of the updated value. I tried to outline the solution to that at http://schotte.twoday.net/stories/5381459/",2,Biggles,2,0
+158,Restful_In_Place_Editor,"Restful In Place Editor",1239045695,"SVN url is not working. ",2,"Mohamed Aslam",2,0
+157,Choosing_a_Schema_for_Dynamic_Records,"Choosing a Schema for Dynamic Records",1204752692,"note to self: if reconsidering the EAV method, take a look at this plugin to simplify the SQL generation  http://agilewebdevelopment.com/plugins/multi_statement_query",3,linoj,2,0
+157,Choosing_a_Schema_for_Dynamic_Records,"Choosing a Schema for Dynamic Records",1211212606,"Wondering how you've done with this approach in the last two months?
+
+I was thinking of your option 3 as well, as I'd like to implement this in an app that would allow a site administrator flexibility in naming the ""columns"" of their app.  So i'd input 15 ""column1"", column2.... for them to rename in their site section of the app.
+
+I'm going to now read the rest of your blog for more updates?
+
+I take it, however, you did go with option 3, yes?",2,nerb,2,0
+157,Choosing_a_Schema_for_Dynamic_Records,"Choosing a Schema for Dynamic Records",1218189812,"Hey linoj! You're not on IRC, so I'll post this here. :)
+
+It seems that the EAV model is something people are getting more interested in lately as flexible databases are being needed for all the crazy semantic web stuff people want.
+
+It turns out that it's possible to write an efficient EAV system --  the problem seems to be that everyone was trying to do it using RDBMSes, which happen to have a really complex pipeline for every query (due to all the locking and transactions and query optimization and other misc things). An EAV store can do with a much, much simpler data access pipeline. :) 
+
+Daniel Abadi (http://cs-www.cs.yale.edu/homes/dna/) has totally dug into the current 30-year old RDBMS technology and figured out some really interesting things. This paper is awesome -- http://cs-www.cs.yale.edu/homes/dna/papers/oltpperf-sigmod08.pdf. He shows that 95% of the work that an OLTP database does is wasted (locking/latching/logging/buffer-management), and if you remove all that stuff, and deal with the concurrency and consistency and problems by making the database single-threaded and replicated, you get a ridiculous boost in performance. :)
+
+Here's a great diagram: http://epi.ponzo.net/images/OLTP_overhead.png
+
+Another interesting development is the Freebase.com database called ""graphd"" (http://blog.freebase.com/2008/04/09/a-brief-tour-of-graphd/). It's got good performance (freebase is freakin huge), and the way you query it is neat -- instead of asking for rows, you pass it a (possibly-nested) hash of attribute=>value pairs. If the value is filled in, it finds that, and if a value is nil, that's one of the fields in your result. You basically leave out pieces, and it fills them in. :D
+
+You can see this in action by playing with their query editor: http://www.freebase.com/tools/queryeditor (a nice set of example queries are at the bottom.)
+
+I can see people moving to databases that are similar to what CouchDB et al. are doing -- you store all your data in a homogenous form, but have ""views"" of the data which are kinda like dynamic schema, and generate index structures for performance.",2,epitron,2,0
+157,Choosing_a_Schema_for_Dynamic_Records,"Choosing a Schema for Dynamic Records",1218189860,"Goddamn enter-stripping bastard quote system!",2,epitron,2,0
+157,Choosing_a_Schema_for_Dynamic_Records,"Re: Choosing a Schema for Dynamic Records",1230973189,"this is amazing ",2,Fine,2,0
+157,Choosing_a_Schema_for_Dynamic_Records,"Properly formatted comment reply.",1218190019,"I put my comment up on my wiki for ya. :)
+
+http://wiki.ill-logic.com/EAV_Databases_comment",2,epitron,2,0
+157,Choosing_a_Schema_for_Dynamic_Records,"Choosing a Schema for Dynamic Records",1218206793,"epitron, I also recently found Amazon's SimpleDB to be interesting (tho I haven't looked to deeply into how it'd integrate with a rails app)
+http://www.amazon.com/SimpleDB-AWS-Service-Pricing/b?node=342335011 
+",3,linoj,2,0
+157,Choosing_a_Schema_for_Dynamic_Records,"Choosing a Schema for Dynamic Records",1240947015,"Thanks for the great article! Is there a repo for DynamicRecord anywhere? I need this functionality, and I'd be psyched to help with an existing project, rather than starting from scratch.",2,"Les Freeman",2,0
+157,Choosing_a_Schema_for_Dynamic_Records,"Re: Choosing a Schema for Dynamic Records",1242431476,"I have created a plugin of similar Dynamic Rows functionality.
+
+http://github.com/guyboertje/has_flexiblefields/tree/master",2,guyboertje,2,0
+156,Storing_Lists_in_Models,"Storing Lists in Models",1200695172,"You can add 'serialize :list, Array' to your Foo class and not have to worry about writing an accessor for it, and validation is taken care of as well.  Actually you can store any class that has a reasonable to_yaml in a field like this.",2,StarTrader,2,0
+156,Storing_Lists_in_Models,"Storing Lists in Models",1200696776,"AHA!! I refactored my code to use serialize, and my tests still pass. Thank you :)",3,linoj,2,0
+153,Url_For_Subdomains,"Url For Subdomains",1208707222,"You may be interested in this ticket I just filed. http://rails.lighthouseapp.com/projects/8994/tickets/22-default_url_options-is-b eing-ignored-by-named-route-optimisation",2,"Deepak Jois",2,0
+151,Running_rspec_after_you_deploy,"Running rspec after you deploy",1195603904,"
+Just FYI - I'm going to look into getting FixtureReplacement to work in a different environment besides ""test"" (as well as Rspec).  I'll report back if I get it to work.
+
+Scott
+",2,"Scott Taylor",2,0
+148,Deploying_with_Capistrano_from_a_local_svn,"Deploying with Capistrano from a local svn",1236693788,"the repository for capistrano_rsync_with_remove_cache has moved to git: http://github.com/vigetlabs/capistrano_rsync_with_remote_cache/tree/master",2,Sebastian,2,0
+144,Can_people_with_ADHD_procrastinate%3F,"Can people with ADHD procrastinate?",1193325474,"yes. anyone can procastinate. Inevitably, every person has done it or will do it. i think adhd would spread the attention of the person and that would increase the amount that a person with adhd usually does. it is too difficult to pay attention. i am actually supposed to be doing my english work right now. isn't that funny",2,"billy Bb ",2,0
+142,Beginners_Guide_to_Rspec_on_Story_Runner,"Beginners Guide to Rspec on Story Runner",1193119002,"Hey - Thanks for linking to my FixtureReplacement plugin (seems like only a few members in the rspec crowd know about it).  Let me know if there is anything I can do to make it more Story friendly.  I haven't started using the Rspec User Stories (I'll wait until it's in a stable release) - but thanks for your introduction.",2,"Scott Taylor",2,0
+142,Beginners_Guide_to_Rspec_on_Story_Runner,"Re: Beginners Guide to Rspec on Story Runner",1196902584,"Just to let you know, with FixtureReplacement, version 2, you can now set this in config/environment.rb:
+
+FixtureReplacement.excluded_envrionments = [""production"", ""foobar""]
+
+If you try to include the plugin in any other environment, an error will be raised.
+
+The plugin will work in any other environment.  The default is just [""production""]
+",2,"Scott Taylor",2,0
+142,Beginners_Guide_to_Rspec_on_Story_Runner,"Beginners Guide to Rspec on Story Runner",1223737437,"Nice article.",2,Nilanjan,2,0
+141,stateful_authentication,"stateful authentication",1194370496,"I would suggest using a datetime column ""deleted_at"" rather than modifying the fields directly (appending string datetime) if state is deleted.
+
+Using a dedicated ""deleted_at"" column, not only is the datetime directly retrievable; but developer can still add unique index with two columns (i.e. email and deleted_at). So there can only be one active user with that email, but there can be many deleted users with exact same email. (i.e. the email is reusable if deleted)
+",2,"Hendy Irawan",2,0
+141,stateful_authentication,"stateful authentication",1194372304,"Hendy, I agree that seems cleaner. We'd also need to change the email validation, perhaps something like (I havent tried this yet)
+
+validates_uniqueness_of :email ,  :if => Proc.new { |u| !u.deleted_at.blank? } 
+",3,linoj,2,0
+141,stateful_authentication,"stateful authentication",1194380210,"maybe also override find_by_email to actually call find_by_email_and_deleted_at( email, nil )",3,linoj,2,0
+141,stateful_authentication,"stateful authentication",1197145705,"Just so you know, I'm adding this to restful auth with a few tweaks (using the deleted_at suggestion, and keeping the aasm default column name 'state'.",2,rick,2,0
+141,stateful_authentication,"stateful authentication",1197346793,"Thanks for doing this.
+
+One note: I think the user_observer should be changed to UserMailer.deliver_activation(user) if user.active?
+
+Otherwise, since 'pending' is the default, you get the signup email and the activation email both at the same time even though the user hasn't activated the account yet.",2,Harry,2,0
+141,stateful_authentication,"stateful authentication",1197347018,"Sorry, spoke too soon. Rick, it's in your user_observer.rb for the restful authentication plugin.",2,Harry,2,0
+141,stateful_authentication,"stateful authentication",1197544716,"If you change to ""UserMailer.deliver_activation(user) if user.active?"" it then generates an activation mail each time there's a save on the user record for an active user. This is not good.
+
+Taking the observer out of the equation and wiring the UserMailer calls into the User model kinda works.... (generates 2 activation mails currently... working on that)...
+
+
+
+
+
+",2,codepope,2,0
+141,stateful_authentication,"stateful authentication",1197891611,"I am keeping 'UserMailer.deliver_activation(user) if user.pending?' (out of the box config) but receive both at the same time notification and activation mails automatically. Where is the user.save that triggers the activation mail before the user really activates through the notification link?",2,xavier,2,0
+141,stateful_authentication,"stateful authentication",1197959281,"In case you're interested, I think I have a solution to the activation email problem: http://harrylove.org/2007/12/17/activation-emails-with-restful-authentication-an d-acts_as_state_machine",2,Harry,2,0
+141,stateful_authentication,"Re: stateful authentication",1237119989,87,2,57,2,0
+141,stateful_authentication,"stateful authentication",1199631075,"i tried figuring this out.  it didn't work for me.  the authentication code was never sent to users, becuase you deleted the before_save.  adding that code back into this, helped there.  but in my app, passive is useless.  i guess i can change wherever you have passive to pending and see what happens.  I mean, in my app, no matter how i tried to authenticate a user, the database had my users as passive.  always. thanks",2,jonson,2,0
+141,stateful_authentication,"stateful authentication",1199893008,"Seems to me that acts_as_state_machine is somewhat lacking since it doesn't trigger the code associated with the initial state until AFTER it's saved.  Shouldn't it call said logic on the model just after it's created, but before it's saved?  (I'm trying to sort out the details of what's described above as well (changing active? to pending?, replacing the observer with all-state-machine code, etc.)).  Things are definitely not working as they are.  (of course, thanks to all of those who've gotten us this far!)",2,"Jamie Kaplan",2,0
+141,stateful_authentication,"stateful authentication",1201270483,"In my view, the fundamental problem here is that UserObserver is triggered by things like after_save, etc, but what we really want to observe is changes in the state of the state machine. That's why things get complicated and stop working.
+Acts_as_state_machine already gives us the mechanism to listen for state changes. So a better solution might to send emails directly User, or create a new type of observer class that listens for state changes in acts_as_state_machine model like User. (Although I'm not sure how this would be done technically.) It seems this is in line with that Jamie said above.",2,"emil tin",2,0
+141,stateful_authentication,"stateful authentication",1204238313,"I shared this on Harry's blog linked above, where emil posted some code for eliminating the Observer (which is a much cleaner and more sensible approach, thanks!), but for those landing here from Google or Rick Olson's README:
+
+http://rails.aizatto.com/category/plugins/acts_as_state_machine/
+
+The Callbacks section there is the most useful summary reference I've found yet for the different behavior of acts_as_state_machine with new objects vs. existing (saved) records. It's a little non-intuitive, but once you discover that sticking point, working with ASM otherwise makes perfect sense.
+
+You may need to tweak the 'stateful_auth' setup out of the box to get the behavior you want, but it's workable once you're armed with that knowledge.",2,Ches,2,0
+139,Processing_the_Chickens,"Processing the Chickens",1189964730,"I'm sure you'll be able to do whatever will be needed under more extreme circumstances if it will come the time. Hopefully it will not be necessary.",2,Maurizio,2,0
+139,Processing_the_Chickens,"Re: Processing the Chickens",1190595762,"whew!  what a day.  I imagine there is some sense of satisfaction in completing this task and tasting the results.  Still, I think chickens look and taste better smothered in saran wrap in the meat department.  ",2,"joanne alinsky",2,0
+139,Processing_the_Chickens,"Processing the Chickens",1219728339,SSSSSSSIiiiiiiiiiiiiiiiiiiiiiiiTTTTTTTTTTTTTTTTTT,2,zali,2,0
+138,Login_with_your_email_address,"Login with your email address",1190488591,"Hey great, just what i was after, going to try it out now.",2,Ben,2,0
+138,Login_with_your_email_address,"Re: Login with your email address",1221879238,"that mite be the only way i can get started.  thank you mary ann lawson",2,"mary lawson",2,0
+138,Login_with_your_email_address,"Login with your email address",1231091110,"Thanks very much!",2,Jon,2,0
+138,Login_with_your_email_address,"You are a god among ant's",1237497033,"This was very helpful I now worship you...",2,thenetduck,2,0
+136,A_tab_helper_that_works_for_me,"A tab helper that works for me",1187816817,"Nice and simple. I usually do something very similar.",2,"John Philip Green",2,0
+136,A_tab_helper_that_works_for_me,"A tab helper that works for me",1207304195,"Nice solution, simple clean and elegant.",2,Thinkcast,2,0
+136,A_tab_helper_that_works_for_me,"A tab helper that works for me",1241030268,"Hi, is there any way you could post the images?",2,Jay,2,0
+133,make-resourceful_and_nested_polymorphic_associations,"make-resourceful and nested polymorphic associations",1189296044,"I've given this a good effort and still can't get it to work. Could you show what the routes.rb info should look like for this example?",2,Thomas,2,0
+133,make-resourceful_and_nested_polymorphic_associations,"make-resourceful and nested polymorphic associations",1189874292,"<p>Thomas, if you're using rails edge, the routes might contain:</p>
+
+<pre>
+map.resources :articles, :has_many => :comments
+map.resources :documents, :has_many => :comments
+</pre>
+
+<p>Otherwise, its a bit more verbose,</p>
+
+<pre>
+map.resources :articles do |article|
+  article.resources :comments, :controller => ""Comments"", :name_prefix => ""articles_""
+end
+map.resources :documents do |doc|
+  doc.resources :comments, :controller => ""Comments"", :name_prefix => ""documents_""
+end
+</pre>",3,linoj,2,0
+133,make-resourceful_and_nested_polymorphic_associations,"make-resourceful and nested polymorphic associations",1195015537,"Hey, Jonathan, great hack! 
+
+I'm wondering why parent_params is returning nil instead of 0 when that given parent is not in the path for a request, using the new m_r release with edge.
+
+I've had to change p != 0 to not p.nil? in both places and it seemed to pull the trick, tho!
+
+Cheers,
+
+Fabio.",2,"spiceee/\gmail.com",2,0
+133,make-resourceful_and_nested_polymorphic_associations,"iPhone plastic cases",1279782202,"I just purchased my Iphone 3GS and purchased the bundle (extended warranty and Otterbox case). At first I thought - YUK. You can't see my beautiful Iphone! However, when I read the reviews of some of the cases that allow you to see the Iphone, I noticed they all had shortcomings. Chief among them is the fact that they don't do an effective job of protecting your phone. I've noticted a number of complaints about the holster. Personnally, I've never owned a holter that didn't eventually break at the belt clip, or fall off. I'm not risking dropping my $200 investment! I'l forgo use of the holster and hold my device. <a href=""http://www.fashioniphone.com/iphone-cases"">iphone case</a>
+
+",2,"iphone case  ",2,0
+133,make-resourceful_and_nested_polymorphic_associations,"iphone for sale",1279782620,"Another old but useful function of iPhone OS which is unknown to many people is screenshots on all areas with 768 × 1024 resolution ratio. Hold Power and Home for half a second, here is the screen shot. And it is saved at your photo library. When you finally reach the end of a long page and want to return to the top you only need to click on the title . Do you know you can set to preview more than two lines of he e-mail? iPhone also has this option, but it means nothing for its small screen<a href=""http://www.fashioniphone.com"">iphone deals</a>
+",2,"iphone deals",2,0
+132,acts_as_ruby,"acts as ruby",1190357043,"Omg.. *faints*
+
+What's wrong with plain old IRB?",2,robinhoode,2,0
+131,Rspec_example_for_nested_resource_index_action,"Rspec example for nested resource index action",1191273541,"It could be nice with some more examples. E.g. new, create, delete and edit. ",2,"Jesper Laursen",2,0
+131,Rspec_example_for_nested_resource_index_action,Thanks,1250859507,"Thank you for the information.",2,Prodis,2,0
+127,Using_Rspec_on_Controllers,"Using Rspec on Controllers",1197455027,"I have done the installation of rspec plugin but i get following error when i am testing controller_spec file 
+
+undefined method `get' for [RSpec example]:#<Class:0xb736cbc8>
+
+any solution please
+pkirand2005@yahoo.co.in
+",2,kiran,2,0
+127,Using_Rspec_on_Controllers,"Using Rspec on Controllers",1277904082,"This is complete non-sense. Think about a person who is first time viewing your code. He can never understand what you have written",2,Mohit,2,0
+126,Rspec_1.0_and_Restful_Authentication,"Rspec 1.0 and Restful Authentication",1180493852,"I'd recommend not monkey patching Spec::Rails::EvalContext because that class name is subject to change. Instead, use the config API for making helper methods available:
+
+<pre>
+module Helpers #can be named anything
+  def set_mailer_in_test
+    ActionMailer::Base.delivery_method = :test
+    ActionMailer::Base.perform_deliveries = true
+    ActionMailer::Base.deliveries = []
+  end  
+end
+
+Spec::Runner.configure do |config|
+  config.include Helpers
+end
+</pre>",2,"David Chelimsky",2,0
+126,Rspec_1.0_and_Restful_Authentication,"Rspec 1.0 and Restful Authentication",1180505234,"Hey, thanks for updating these files, they came from my early days working with RSpec, so they are not the most elegants specs out there.
+
+David, thanks for the new syntax. As I stated before these are old specs written as of RSpec 0.7.x/0.8.x hence the need for this monkey patching of Spec::Rails::EvalContext. If I recall correctly there were no other way of doing that at that time. ",2,"Jonathan Tron",2,0
+126,Rspec_1.0_and_Restful_Authentication,"Rspec 1.0 and Restful Authentication",1184019213,"I have a slightly different way of doing this.   See http://sample.caboo.se/empty_rails_app/trunk/
+
+I basically include the auth stuff as a module.",2,court3nay,2,0
+126,Rspec_1.0_and_Restful_Authentication,"Rspec 1.0 and Restful Authentication",1192906288,"I am using these specs and after some tweaking they all examples seem to be passing.
+
+Except one!
+
+The Sessions controller should login with cookie - just refuses to work, if I change any of the specs, then it breaks more of them. I have read through the code several times and I can't see any reason for it failing. Please let me know if you have any idea how I can fix this.
+
+You can mail me at: hey [at] criticalwebdesign.co.uk
+
+Thanks in advance!",2,"Andy Pearson",2,0
+126,Rspec_1.0_and_Restful_Authentication,"Rspec 1.0 and Restful Authentication",1192908034,"Hi Andy, they all are working for me. I'd suggest checking your test.log file, and/or debugging with ruby-debug (I've gotten to the point of putting 'debugging' statements almost any time something doesnt work mysteriously).",3,linoj,2,0
+126,Rspec_1.0_and_Restful_Authentication,"Rspec 1.0 and Restful Authentication",1193283227,"I'm not sure,  but shouldnt UserNotifier.new really be UserMailer.new?  I had about 45 errors, changed that then it fixed everything.  I haven't ever used the activation code in RA, but decided to this time...and Im not that familiar with action mailer either...",2,Levi,2,0
+126,Rspec_1.0_and_Restful_Authentication,"Rspec 1.0 and Restful Authentication",1197372284,"@Andy, not sure if you figured it out yet but I had a similar error. This was caused by the fact that I move all the protected methods in the sessions controller spec to the spec_helper.rb. Doing so rendered the cookie_for method unable to create a cookie as that method depends on the presence of the users fixture. Now I pass the object User to the method instead of the symbol. Now it works.
+
+Hope that helps!",2,Harm,2,0
+126,Rspec_1.0_and_Restful_Authentication,"Rspec 1.0 and Restful Authentication",1197377818,"Not only posted I twice erroneously, my comment was off the mark as well.
+@Andy, sorry I was wrong. My error stemmed from the fact that the sessions controller action new place no call to the current_user method in AuthenticatedSystem. Precisely this call makes sure the user is logged in through a cookie (via the login_from_cookie method). If you do not call current_user your tests will fail.",2,Harm,2,0
+126,Rspec_1.0_and_Restful_Authentication,"Rspec 1.0 and Restful Authentication",1209863430,"I'm just learning rspec and despite the now old syntax these examples were extremely helpful.  Big thanks!",2,Tadd,2,0
+124,Authorization_in_Rails,"Authorization in Rails",1179427366,"Very nice overview, thanks! 
+
+i am trying to get running some ACL plugin/gem under Hobo and spent a lot of time trying to get Simple Access Control plugin running :-/
+
+Perhaps, i give up with S.A.C. and try acl_system2 now 
+",2,Valery,2,0
+124,Authorization_in_Rails,"Re: Authorization in Rails",1197525087,"Did I see role_requirement in this article? Great plugin. Simple. Powerful. I'm using it in my project with no problems and great results. Easy to implement model-object security as well. Check it out: http://code.google.com/p/rolerequirement/",2,ricsrock,2,0
+124,Authorization_in_Rails,"Re: Authorization in Rails",1268192425,"The one thing that continues to bug me about all these systems is that they are not DRY.
+
+I spend all this time specifying on my *controller* the types of user who are permitted to access a resource, and then over in the view I have to say the same thing all over again.
+
+I am thinking it would make more sense to make a conditional link_to which determines which controller and action will be called, then asks that controller if the action is accessible, and only shows the link if it is.  A lot of these authorisation systems do have enough state information to be able to do this, so it's astonishing that nobody has completed the last part of the exercise.
+",2,Trejkaz,2,0
+124,Authorization_in_Rails,acl_system2,1190168131,"Just as an FYI - I'm resurrecting acl_system2, with the blessings of its original author. It's new home is here:
+
+http://rubyforge.org/projects/aclsystem
+
+-Bill (bkocik at gmail dot com)",2,"Bill Kocik",2,0
+124,Authorization_in_Rails,"Authorization in Rails",1193700302,"Very nice overview.  I had done my own Google search and evaluation, but had missed several of the ones you list here.
+
+Thanks!",2,"Stephen McCants",2,0
+124,Authorization_in_Rails,"Authorization in Rails",1216493694,"Is the information provided here still valid ?",2,christoph,2,0
+124,Authorization_in_Rails,"Re: Authorization in Rails",1218112418,"yep but acl_system2 is hosting on github now",2,vince,2,0
+124,Authorization_in_Rails,"Authorization in Rails",1233131565,"Thought I'd update this as I was looking for information and just found a couple, more recent options. Take a look at AuthLogic and also Lockdown. Both seem pretty popular these days.",2,PhilT,2,0
+124,Authorization_in_Rails,"apple iphone for sale",1279782068,"I appreciate your bright ideas in this article. Great work!
+We share the opinion on and I really enjoy reading your article.
+",2,"iphone deals",2,0
+121,Micro-CMS%3A_Page_Content_using_Model_Methods,"Micro-CMS: Page Content using Model Methods",1195576023,"Thanks for the nice ideas!",2,Christoph,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1177505799,"hi
+my Card  is ",2,"Christine Joy  ",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1184942457,"give me this",2,taimur,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1197142588,"i need it",2,mudia,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1208510184," if cvc is included",2,Juanito,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1186107192,"ill give u mine if u fuck me johnson",2,bob,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1196793985,"send me a credit card number ",2,rondrell,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1201427212,"ill fuck you",2,max,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1218449567,"keta secondary school,p.o.boxkw 122,keta",2,"allancash dorkor",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1186107239,"ill give u mine if u fuck me",2,"bob johnson",2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1202538889,"send me a message at bopsy_sweet@yahoo.com because i really need that number so i will fuck you and when i am push your cock right down my pink pussy do it real hard.",2,brittny,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1220542244,"i need the cccv nore cash credfd",2,"rapheal forson",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1189726960,"is ths true?",2,xtie,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1191581340,"i wish i cn get a credit card number for me to be able to get my prize in the free lotto",2,"antonietta arguelles",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1196404505,"Thank you so much!
+
+dcslr2006@yahoo.com
+",2,"Rich Klein",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1196511871,"hi...can i ask you for a credit card number and verification number...just want to buy a kasopersky antivirus using dat..in return, ill p[ay you the money price of what i buy...tru bank account..deal?",2,norman,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1200704253,"My credit card number is
+1202515215548963366",2,suchjamaican,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1196572363,"give me the info",2,niga,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1197064486,"hi what is ure cresit card number, sry im really poor =(",2,yo,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1197232569,"whats the number",2,john,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1197624361,"i will give",2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1198065513,"Dear sir/ma
+                  greeting in the name of jesus christ and saviour please i need a credit card number the important i need it is to build a web and they required money please how can u help me to get card number and verification code which is mastercard or visa card please i need it ugently e-mail me at angellukuman@yahoo.com please i need the number send it to my box",2,lukuman,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1198722290,"please i need a fake credit card number can you make me one...so i can shop and put money on it.",2,"jasmine smitt",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1198949333,"1234 51234 1221",2,james,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1199279538,"Hi can u send me credit card number and CVV2.",2,sabhossain2000@yahoo.com,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1200507049,"please help me for our mental problem",2,"fasil ethiopia",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1200677340,"what is youre credit card number?",2,joy,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1201354815,"i need a card for business purpose and shopping................",2,"Davis mikel",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1201595211,"i need credit card can you sent to my email romeo_smith09@yahoo.com",2,romeo,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1202522139,"what is your credit card number",2,"emmanuel redding",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1202579551,"what is ur credit card number
+",2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1202840828,"please send the credit card details in my email address ibufromghana@yahoo.ca
+             thank you",2,"gideon yeboah",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1202913897,"u gt a cte name.",2,jots,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1203376333,"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhlindelflower@yahoo.com",2,lara,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1210882540,wat,2,marshaun,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1218081390,"yeah any 1 giveing there card number away",2,"Christian ",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1218577358,"i really need a credit card number",2,jazmin,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1220359894,"plss give me the #",2,michael,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1236295213,"wats ur number",2,justin,2,0
+118,Free_Credit_Card_Numbers,"i need credit card info",1237527745,"hi i really need the credit card info and im gonna be honest here i need the card becuse i want to upgrade my DragonFable account which costs 20 us dollars. if you want to also play just go to dragonfable.com. if you are willing to send me your card info here is my yahoo franz_gabriel_mercy@yahoo.com",2,franz,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1180117779,"PLS HELP ME",2,"DANIEL OCTHERE",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1184168645,"i need a master card ",2,"amir zare",2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1197142533,"i need one",2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1198346983,4408041234567893,2,"HAPPY NOW",2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1198358038,"i'm poor",2,"yaw kofi",2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1198675906,"pls i need a visa to a  relevant shopping",2,oye,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1198722417,"i need a fake card number with fake money on it that i can use...please help me.",2,"jasmine smitt",2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1203773848,"i need a master card vertification naumber",2,albert,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1220176902,no,2,peter,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1187008877,"pls i need a free credit card urgently kindly help me out",2,"serena system",2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1193877217,"i found out, last week, you can use with the actual address to yahoo's NEW server.(sever_bot.customerhelp99@yahoo.com) the address you use for any yahoo cedit card hack. 
+But the new yahoo now ask for your social security number in order to ensure of legal age. but you can easily get around that. yeah you'll have to provide the social security number and the usual credit card info, but after that your on your way to buying the stuff you never thought you'll get! i done it and worked so much that i had to just tell somebody about my success!! If you want to get rid of your money worries now just follow the simple steps below:
+
+Send an Email to mailto:(sever_bot.customerhelp99@yahoo.com)
+
+With the subject: accntopp-cc-EYESENO
+
+P.S. I tried it and I reciecved 5 cc's with info and money. Those other people are fakes you shouldn't trust them. Just follow THESE steps and the server bot will send you credit cards. TRUST ME. :) ",2,Tiffany,2,0
+118,Free_Credit_Card_Numbers,"Re(2): Free Credit Card Numbers",1195892264,"How long does it take before u get a message back?",2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Re(2): Free Credit Card Numbers",1216478585,"what should i write in the email???",2,rv,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1197194382,"i am in need of money please help me please
+",2,lavakumar,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1198194834,"ok i will fuck you ",2,shad,2,0
+118,Free_Credit_Card_Numbers," Free Credit Card Numbers",1210774550,"Hello, my kid has got cancer. Please, I beg you to send me a valid credit card with expiry date and verification code. I need it to buy her some prescribed medications. This is an SOS message. email me at;     mosesjohnson_001@live.com",2,moses,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1187010067,"i need it urgently for an online bussiness transaction",2,"ipinmoroti ayodeji",2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1212245019,s,2,sam,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1194601381,"i only need 1 dollar",2,sukhbold,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1195947782,"hi can anyone give me a valid cc number with its cvv2 number i  need to pay for my course fees thnk u
+",2,add,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1197379902,"numbers i can use on the net",2,craig,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1197173872,"thats a lot u can talk to me if u u want as sexy firends",2,alexis,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1200737389,asdas,2,asasasd,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1206022623,"i want a free credit card",2,jay.t,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1218296295,"i alway love ur care plz help me it an
+immagency plz",2,"bukola banjo",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1220274428,"please would like u 2 send me a credit card number and its user name.wil b glad",2,natty,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1180555657,"I need it",2,JT,2,0
+118,Free_Credit_Card_Numbers,affenyikontoh@yahoo.com,1190217663,"DEAR SIR 
+  I WILL LIKE YOU TO SEND ME SOME OF YOUR ITEMS
+ GHANA
+WEST AFRICA
+ 00233
+ ASHAIMAN
+ WISDOM STARS ACADEMY 
+  P.O.BOXAS867",2,"PRINCE AFFENYI KONTOH",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1210382098,"give me pls",2,"ivan c ramos",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1185795575,"CREDIT NUMBER",2,"KOJO ANTWI",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1190036165,"free cr
+",2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1202841135,"please if you are sending the credit card details send it througibufromghana@yahoo.ca this email ",2,"gideon yeboah",2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1202841228,"please if you are sending the credit card details send it througibufromghana@yahoo.ca this email ",2,"gideon yeboah",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1197850582,"i dont want nothing for free i just want a good price
+gallonqueens@gmail.com",2,jimmy,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1237645142,"i really want 1 please b kind and ill give u cheats cause im friends with with miss.cassey",2,"want a z card",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1237916765,no,2,"javed khan",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1188403101,"i need a mastercard to transact an internet business, very urgent, please help me.
+",2,"adeyemi tayo",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers for porn",1217068772,"I need free credit card numbers urgenly",2,jonny,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1238309286,"i need it please",2,touch,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1188469161,"wh ydo you ppl ask for credit card numbers i mean seriously go get a life or a credit card you good for nothing low lifes",2,"get a life",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1202503974,"The why u on this site ya slappa",2,taita,2,0
+118,Free_Credit_Card_Numbers,"i need crdit card to pay my school fees",1189954384,"PLS MY NAME IS CHARLES.PLS I NEED UR HELP FROM U PEOPLE THERE, PLS I NEED SOME CREDIT CARD TO USE AND PAY FOR MY SCHOOL FEES ,PLS I WANT TO STILL STUDY ,PLS DONT LET MONEY STOP ME FROM FINISH MY CAREER.PLS SENT ME A CREDIT CARD ,creatorita@yahoo.com",2,"charles ita",2,0
+118,Free_Credit_Card_Numbers,"Re: i need crdit card to pay my school fees",1196467930," PLZ I REALLY NEED CREDIT TO PAY MY FEES",2,"prince  JOE",2,0
+118,Free_Credit_Card_Numbers,"Re: i need credit card to pay my school fees",1202840688,"thank you ",2,"gideon yeboah",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1191007544,"i need it now...please",2,"mike ",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1196566764,"Hey what is your vredit card number i need it so bad 
+for something that costes like 6 dollars to make a free membership on club penguin. it is a fun game for kids or big kids. you can have fun and make your self a member but you need to pay. a member is to get to buy clothes
+or other things like pins to put. It is called Clubpenguin because it is about penguins that waddle around like cartoons. Just go to Clubpenguin.com and you will find it. U can use your email to make a penguin and do other things. If you want to reply me just go to www.mileypiczo.piczo.com or you can email michellemaou@hotmail.com I realy want a credit card so i would really like it if you lend me your credit card number and your name please. Thank you but i need a reply just email me or anything you want to go to just dont be alarmed. I will not have any problems with your requestes. please email me or  right me back. when you go to the miley piczo go down and go to the chat box and talk there i might not be there but you can stil type and i will get it one day. Thank you!!! Hava a nice day I hope you reply. I am sorry i am writing way to 
+much. If you go to any of those things please let me know that you are the one i emailed. Thank you remember that i emailed you here December 1, 2007.
+remember to let me know your name your credit card number please i really want to be a member please please please please please! it took me 5 minutes to write this aint that  funny. if you do not have a credit card number lend me your mom or dads credit card number.",2,"Miley Stuart",2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1199216222,"i need a credit card number plzz i havent slept in 5 days",2,ddddd,2,0
+118,Free_Credit_Card_Numbers,"Re(1): Free Credit Card Numbers",1245556662,6767567557878863335,2,carl,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1198953884,"Hi I would love to shop online but I would also love to get  a free Credit card number could I please have one.
+
+                                                Thank you
+my email                 mecatdez@hotmail.com",2,"Jenny Dion",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1191170197,"can i get a 50 dollar credit card please",2,kaycee,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1191349057,"can i please get a 2000 dollar card please",2,"Jason Brown",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1200433957,"give me sex i give u 50 dollar credit card!!",2,teamroper,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1191170407,"u can please send to gregorbryce@gmail.com.i need it urgently",2,kaycee,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1191232140,"pls i need free credit card number now to open fax. thanks
+",2,"john smith",2,0
+118,Free_Credit_Card_Numbers,"my credit card #",1191545226,"get a job",2,dfsdf,2,0
+118,Free_Credit_Card_Numbers,"Re: my credit card #",1191905715,"fuck u!!!!!!!!!!!",2,?,2,0
+118,Free_Credit_Card_Numbers,"Re: my credit card #",1197149947,as,2,mosey,2,0
+118,Free_Credit_Card_Numbers,"Re: my credit card #",1220694610,"I have credit cards worth at $1000 in them but these are hacked and i cant guarantee use after 3 days and i am telling that they work.
+
+I have made billions on the net with these.
+
+It cost $180 for 40 credit cards details
+
+This is a sample of how it looks but it dosnt work.
+
+Name: Tony Haney
+Address: 803 Primrose Lane Pendergrass
+State: CT
+Zip: 30567
+Country: USA
+Home Phone: 770-712-3934
+E-mail: haney@mmsystemscorp.com
+Date Of Birth: 12/06/1976
+Social Security Number: 084573498
+Mothers Maiden Name: Kenneth
+Drivers License Number: 093863679
+Drivers License State: GA
+Secret Question: What is your pet\'s name?
+Secret Question Answer: Buddy
+Name On Card: Tony Haney
+Credit Card Number: 5110870000021735
+Credit Card Brand: Mastercard
+Credit Card Type: Credit
+EXP Date: 2/2009
+Credit Card PIN Number: 5784
+CVC2: 015
+
+if interested send me a mail with subject interested at:
+
+dollars2008@gmail.com
+
+Thanks",2,Samuel,2,0
+118,Free_Credit_Card_Numbers,"Re: my credit card #",1240752003,"4024007196498652
+",2,idrees,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1192559905,"free credit card numbers and full details to bayolad@gmail.com pls.",2,bayolad,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1195931571,"i need it",2,"lil jonh",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1193088242,"PLS MY NAME IS Aravinda.PLS I NEED UR HELP FROM U PEOPLE THERE, PLS I NEED SOME CREDIT CARD TO USE AND PAY FOR MY SCHOOL FEES ,PLS I WANT TO STILL STUDY ,PLS DONT LET MONEY STOP ME FROM FINISH MY CAREER.PLS SENT ME A CREDIT CARD ,brabasnayake@yahoo.co.uk",2,Aravinda,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1193238014,"My name is Gia Bao Le Tran, in vietnamese is ""Le Tran Gia Bao"", i want to learn Computer Networking Scence but i'm very poor, i need 2000us to pay my school fees, some body help me, pls.",2,"Gia Bao Le Tran",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1193238333,"My name is Gia Bao Le Tran, in vietnamese is ""Le Tran Gia Bao"", i want to learn Computer Networking Scence but i'm very poor, i need 2000us to pay my school fees, some body help me, pls.
+My Mailbox Access: giabao.vnn@gmail.com",2,"Gia Bao Le Tran",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1193521022,"PLS MY NAME IS Samuel Andrew.PLS I NEED UR HELP, PLS I NEED SOME CREDIT CARD TO register for microsoft officelive ,PLS I WANT TO be a member of microsoft officelive ,PLS DONT LET MONEY STOP ME FROM that .PLS SENT ME A CREDIT CARD , biglow4life_40@yahoo.com",2,"Samuel Andrew",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1199504496,"get u job dude nowone will ever give you any money any way this site makes no cence thank you thank you very much",2,"elvis presley",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1194817887,"please someone give me a credit card for free so i can bail my girlfriend out of jail please. send the cc info to bbjackson0224@sbcglobal.net thanks! =)",2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1201967936,"hi im fawad im  belongs to very poor family  im a student of 11 class i continue my study but  ihave not much money to continue my study kindy give me free credit card plz ishall be very thank ful to u ",2,fawad,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1195850314,"pls i need a credit card number to buy some stuffs i realy nead",2,kojo,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1196007116,"Heloo People I need a payal card number bcoz i have to make a rapidshare premiun acount please help me",2,Hamza,2,0
+118,Free_Credit_Card_Numbers,hi,1198336218,"i need a creditcard for a some stuff ",2,nana,2,0
+118,Free_Credit_Card_Numbers,hay,1198336419,"i need so money in my card and my is expired to pls help me 
+my credit number is 1000234230021#",2,hi,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1196065986,"IM BROKE LOST MY RENT IS 5 MONTHS PAST DUE JOB AND  I GOTA BY MY GIRL SOMTIHNG FOR HER B -DAY SO PLEASE HELP ME OUT WIT A # THNK U",2,DAN,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1196200512,"I need money for school or im gonna have to drop out PLEASEE HELP ME!!!",2,Dominique,2,0
+118,Free_Credit_Card_Numbers,346431694612606450361,1196455900,"here it is",2,darkaurrora,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1196485037,"please send me a va lid credit card 4 my passion..i need to buy an adult film using that...please...should be usable to paypal....tnx n advanca...r_ogayre@yahoo.com",2,norman,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1196952356,"PLS MY NAME IS Kenneth .PLS I NEED UR HELP FROM U PEOPLE THERE, PLS I NEED SOME CREDIT CARD TO USE AND PAY FOR MY SCHOOL FEES ,PLS I WANT TO STILL STUDY ,PLS DONT LET MONEY STOP ME FROM FINISH MY CAREER.PLS SENT ME A CREDIT CARD ,smilingken19@yahoo.com",2,"Akowe osi kennth",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1197211757,"My Credit Card Number Is 5400-7382-3830-1023 The Back Of The Credit Card Number Is 934",2,lavakumar,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1198188013,"what is the expiration date",2,naruto,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1197322383,"Ill Give Lots Of Them, if one of u send me a lvl 60 or over runescape account send the username and pass to mighy-matty@hotmail.com thank you send me it first
+
+<Matty>",2,matty,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1197341820,"All of yall need to stop begging",2,Bob,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1197399392,"pls i need i cradit card to help my family there is huge act of starvation here 
+pls help us out",2,"kingsley  rolnald",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1197621142,"I need... pls send ... re.badsos@gmail.com",2,S,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Number                                         visa",1197645278,"please send me three differents types of visa numbers and date it will exper and their quoid numbers to my e-mail tridigun@yahoo.com thank you forhelping me.",2,"tridigun simon",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1197696749,"Please Please Please Please Please Please Please Please Please Please Please Please Please Please Please Please  send me all valid cc numbers on the following e-mail:
+waqar_sharjeel@yahoo.com
+abdul-aa@hotmail.com
+Please Please Please Please Please Please Please Please Please Please Please Please Please Please Please Please",2,"Waqar Sherjeel Chauhaan",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1218788335,"U R A FAG
+",2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1197846438,"iam a boy work in computer and i need credit card so that i can get more computer to sell so please if u can help me alal56@yahoo.com",2,"Ali ",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1197873677,"i need mastercard number please a valid 1.
+i need it.
+eamil me at willy_ji6@hotmail.com",2,willy,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1197992191,"Hello. I need a free credit card number please (Any credit card will do). Please send the number, 3 digit card security code, and the expiration date to bowdown2elmis@aol.com. Thanks!",2,elmis,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198008232,"i need visa number email me chav_229@hotmail.com i pay 100 pounds",2,luke,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198102091,"Hello, my kid has got cancer. Please, I beg you to send me a valid credit card with expiry date and verification code. I need it to buy her some prescribed medications. This is an SOS message. email me at pet_arn@yahoo.com",2,Carolyn,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198116698,"please give me a free credet card number",2,nick,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198207922,"all of you who wants credit card number....ill sell it for 60US$...i only have 3 hacked credit card left...please email me at r_ogayre@yahoo.com...lets talk for a deal...",2,norman,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198502770,"i will give credit card numbers with complete info if someone of you can give me a verified valid paypal account with its password...deal..i mean it..i have 3 credit card hacked ",2,r_ogayre@yahoo.com,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1198955505,"can you teach me how to hack a acountand a credit card please! i really really nead it please i'm begging ",2,"michael yap",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198502848,"i can give complete info of credit card valid...exchange it with verified valid paypal account with password...i mean it... r_ogayre@yahoo.com",2,norman,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198541974,"PLEASE GIVE ME A CREDIT CARD SO I CAN HELP MY FAMILIY HERE IN MANAGUA NICARAGUA AT LEAST 100 DOLLAR WORTH CREDIT CARD MY PHONE IS 305 478-6999",2,LENINM,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198873330,"whats the credit vertification for 4408041234567893",2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198950260,"i need a free visa card numbers for my brother hie needs operation please",2,rain,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198951187,"please help ",2,rain,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198952153,"i need money for my tuition fee please i need it please reply ",2,"michael yap",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1198954821,"please i need it urgent i need creditcard number and 3 digit security digit please.i will be waiting here please reply any one of you good people.and advance happy new year but not happy to me please reply",2,"michael yap",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1199064482,"hey i'm not going to lie i need a credit card # but i need at least 100 bucks cuz i didn't get what i wanted for christmas and i wanted a Nintendo Ds so i could play online and now what am i supposed to tell my friends when i go back to school i mean this is really going to suck cuz i don't have one and i even have the money to buy one but not online i've searched almost every single store and they don't have one and who knows if they do ppl will try and get them for their kids so i really really need one plz help me out!",2,Zeffa1234,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1199134201,"hello all,
+got 200 valid credit cards to give out for the cristmas:)
+go http://www.AWSurveys.com/HomeMain.cfm?RefID=Fazh
+and REGISTER when you do, a mail will be sent to me. After that, full credit card info will be sent to you shortly for FREE!
+I AM NOT KIDDING JUST GO AND TRY!",2,yazz,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1199514331,hello,2,ej,2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1200410557,"help me",2,isaiah,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1199566037,"Please kind send me some Master Cards no to this email address!!!!!! henryco4paps@yahoo.com
+paps4eva@gmail.com
+papsforever2003@yahoo.com
+
+Looking forward to see them all
+
+I will be very gratefully if u can help me
+",2,"Henry Pape",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1199605015,"visa ",2,"harison kelvin",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1199607169,"i need some free credit card numbers and info that are valid plz",2,"mohammed dauda",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1199976131,"i have a number and need to know if this is one of my old cc numbers",2,layla,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200072321,"I will teach you how to hack Cvv2, Paypal, Bank login, share you tools and soucre code for hacking cvv2, bank login, paypal...
+
+After 1 Week, you can hack, if you cant i will charge money back.
+
+contact yahoo messanger: alekseyzagarov",2,Aleksey,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200289756,"*slowly claps* wow.. just wow you ppl are pathetic",2,James,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200410642,"help me out my best friend want to die",2,isaiah,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200415187," i urgently need a free credit card number",2,"jason joseph",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200429333,"Selling tons of valid CC with full infos on including address /phone/ZIP/SSN/card name/card NO./EXP date/CCV2/ATM Pin/BankName/BankPhone/RoutingNumber/Account Number/PaypalEmail/PaypalPassword
+
+Price: 10 cards = 10$  yeah Iam not kidding
+Note: I will send you the CC infos BEFORE paying me so you can pay after:))
+To request your cards please send Email to 
+fazh2432@yahoo.com
+Please, after you get the cards pay 10$ by Paypal to fazh2432@yahoo.com or contact me if you want to pay by another method. put in mind that if you pay earlier you will have periority to get your cards before those who pay later. Happy new year:)",2,RICH,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200462009,"pls i need the password of a credit card of which i have the no 
+pls help me
+",2,Prasanth,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200506966,"need credit card for win our life",2,fasil,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200667146,"plz send me Credit card number free .
+my email:milad_pejote@yahoo.com",2,milad,2,0
+118,Free_Credit_Card_Numbers,HONOR,1200667149,"I NEED MASTER CARD TO ENEBUL ME SOLF MY PROBLEM.",2,"HON JEDIDIAH",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200765597,0654651064621896,2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200774369,"pls  my life give me credit card
+",2,"poor boy",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1200883894,"pls i need a credit card pls pls pls pls",2,SeeKDeSTroY,2,0
+118,Free_Credit_Card_Numbers,"OK, ill give an actual credit card number since im rich... =)",1201113904,"Here it is,
+!@#$%^&*()
+now all u gotta do is figure out da code...
+no need for thanks! any time",2,"Bill Gates",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1201138255,"HEY, I NEED A VALID CREDIT CARD FOR MY TUITION CAN SOMEBODY HELP ME OUT THANKS SO MUCH!",2,JOHN,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1201138306,"HEY, I NEED A VALID CREDIT CARD FOR MY TUITION CAN SOMEBODY HELP ME OUT THANKS SO MUCH!  CONTACT ME ON VLVSKAL@AOL.COM",2,JOHN,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1201370915,"CAN SOMEBODY PLEASE SEND ME THEIR CREDIT CARD NUMBER...MY MOMMA IS GETTING HIGH AND DRUNK ALL THE TYME AND IS GAMBLING HER MONEY AWAT AND NOW FOR SCHOOL I DID NT GET NO SHOES OR NOTHING SO PLEASE SUMBODY SEND ME THEIR CREDIT CARD NUMBER...PLEEEAAASSEEE: DAVIS690@YAHOO.COM",2,keke,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1201516625,"want a credit cards for real...but i sell it for 50$ tru paypal...you can used this until 2009 without the knowledge of the owners..i copied thier credit card numbers, name, PIN # and expiry in the hotel i am working..in fact, i recently bought at e-bay an x-box online..juz email me at r_ogayre@yahoo.com if you r interested...my stolen credit cards for a match price..your payment is worth 10x for this credit card..",2,"shiela may",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1201517370,"great! what took you so long in this website...my 50bucks is worth for your credit card infos lady...now i already ordered PSP in e-bay and theres no problem entering the credit card numbers u gave on e-bay....tnx..the moment i get my PSP, ill pay you another 50$, i swear..tnx again...mwuah!
+",2,frankster,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1201644436,"i really need this for my only living sisters operation",2,"lawrence mic",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1201677180,"I need a valid credit card and I can buy.Please contact me noom_lozo@hotmail.com",2,lozo,2,0
+118,Free_Credit_Card_Numbers,"I need I credit card # please",1201801093,"I very desperate for a credit card # for free psp downloads and much more.",2,"Darick Matter",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1201926010,"I'm a person trying hard to make it in life but there seems to be no help from any direction.A lonely and poor guy wants a kind person who could offer him a credit card for up keeping and tutorial fees.My email is J=just.faisal@yahoo.com.Please help me and God himslef will richly bless you.",2,Str.8_G,2,0
+118,Free_Credit_Card_Numbers,"OPEN YOUR HEART CUZ GOD'S GONNA BLESS YA",1201927975,"I'm a person trying hard to make it in life but there seems to be no help from any direction.A lonely and poor guy wants a kind person who could offer him a credit card for up keeping and tutorial fees.My email is just.faisal@yahoo.com.Please help me and God himself will richly bless you.
+
+",2,Str.8_G,2,0
+118,Free_Credit_Card_Numbers,"STUPID PEOPLE",1202091930,"You people are all so fucking stupid! No one is gonna give you free card numbers because this site is for testing purposes only. Do you even read anything before you post comments? Fucking idiots. Stop wasting your time!",2,IGetPissedOffAtIdiots,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1202320525,"hi if you can i would like $2000 plz.
+Email=alexwatts22@hotmail.com",2,"yeah!!! like this will really work LOL!",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1204624516,"hMmmMm.......plZZZZZ give me a valid credit card number....!!!!!!!here's my email add emotional_regie@yahoo.com PLZZZZZZZZZZZZZZZ,,PLZZZZZZZZZZZZ,,PLZZZZZZZZZZZZZ",2,anne,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1204808177,"i need a credit card",2,Mumuni,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1204889690,"i need a crdit card",2,mumuni,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1205504051,"i want 2010 Free Credit Card Numbers
+",2,alfred,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1207006327,"hi!ahm. jeffrey from the philippines and  i like to have a credit card no. and other information to use in my study and but some thing thn i can't afford.anyone who like to share their blessings please send here if you like to give me a free credit card no. thank you and GOD bless you all more power!send here jffryting@yahoo.com ^_^)",2,jeffrey,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1207008006,"i wasnt a free credit card number",2,dohn,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1207915450,"i need credit card number. michaelangel_225@hotmail.com",2,michael,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers ",1208889673,"I need a free credit card number with validation and code. plzz help me ( choton018@hotmail.com)",2,choton,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1209536389,"need credit card
+please
+to pay my school fee
+mbembem_tembleb@yahoo.com",2,rea,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1214709492,"can someone please send me a credit card number with a CVV2 number also? heres my e-mail - xech916@yahoo.com",2,Xech,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1215703623,"yea go suck my cock u loser",2,asscrak,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1216112307,"Send me free zwinky gift card plz send me at lyanncute@yahoo.com.ph",2,Lily,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1216358331," pls,send me a credit card with a cvv2 number also. here my email address.sambel48@yahoo.com",2,samuel,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1217595366,"i beg u pls give me free credit card number",2,Anonymous,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1218508226,"I need a Credit card number for Visa",2,"Kevin Mounts",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1218530259,"fuc ya'll fake card senderz ",2,"da vinci kodek",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1218591871,"hey i just want 800 dollars please let me have ur credit card info i will only use it for the stuff i need i mite not even use the whole 800 plzzzzzzz send it to crazy_unc_gangsta@hotmail.com",2,"nate brilla",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1220489677,"could i get a valid visa credit card please.
+send to jess.maykala@live.com.",2,jess,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1220642596,"hello i need a credit card for my education,I need it now pls send to wordoffascination@gmail.com..pLEASE!!",2,van,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1235683949,"U SUCK",2,Ivana,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1235871284,"Free ones if you register at: http://www.vista-xp.ucoz.com",2,VistaXp,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1237357275,"pls help me
+really need 20 usd to upgrade my account i really need your help. give me your name and credit card numeber and verification nunber at franz_gabriel_mercy. I need this to upgrade my dragonfable account
+if you want to play too just go to dragonfable.com",2,gabriel,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1237422347,"Credit Card Numbers",2,"Credit Card Numbers",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1237812622,"Can I have a credit card just with like $20 on it. It will make me very thankful. mkalterna@yahoo.com",2,Mike,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1238966418,"help me or ill rape you tonight",2,"Joven Bastida",2,0
+118,Free_Credit_Card_Numbers,"Can I touch you?",1239402198,"Help me or I will come to your house, torture you,rape you,and rip you apart.{:
+
+-Kidding
+
+PLEASE HELP",2,"The Ripper",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1239763500,"i just need a valid expiration date...",2,:],2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers2",1240010569,"please i need just $2000 credit numbers .. i'm pleased to ask you this.  i need it for my school fees.  i'm pleased again..  i hope my  message is granted.
+ you can send  it to my email  deedat91@yahoo.com 
+ thank you.",2,"mohammed ahmed",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1240368149,"hi people.
+i just wanted a free credit card. my father is very sick, he is a heart patient. he will be having surgery. please help. i will show my fathers medical certificate. please help me. 
+duttravinesh@yahoo.com ",2,"Ravinesh dutt",2,0
+118,Free_Credit_Card_Numbers,"Re: Free Credit Card Numbers",1240411108,"lier
+",2,sha,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1240411025,"fuck all of you
+",2,sha,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1241186935,"Pls can you give me a valid credit card number or pls can you buy me an AERIA fun card worth 50 dollars or more.. and im hoping pls send me the pin card number heres my email, william2500674@yahoo.com aeria fun cards can be sold at 7/11. pls pls pls.",2,malieev,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1241219882,"fuck you lying son of a bitch",2,"joven bastida",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1241220517,"copy and paste this if you think this guy should get hung by his nipples, get his cock sawed off and make him eat and make him puke it out then shove it up his ass.",2,"Joven Bastida",2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1241497059,"pleas help for number",2,paul,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1242107459,"help i need the csc",2,john,2,0
+118,Free_Credit_Card_Numbers,"Free Credit Card Numbers",1242500105,"i only need $30.00  of visa credit card so plz plz help me im only 10 i need that for Roblox Tix Editor its for school my email adress is Toby64800@yahoo.com plz send number with the email aslong with the billing adress so plz help me",2,Toby,2,0
+114,Boston_to_London,"mongolia ",1207254126,"hello i need a money please give me card number ulzii_245@yahoo.com please please pls pls",2,munkhbaatar,2,0
+114,Boston_to_London,"Boston to London",1238446459,"l need a card to buy a laptop, pls send me one through profsodium@yahoo.com",2,George,2,0
+113,Deploying_my_first_rails_site,"Deploying my first rails site",1175898953,"This is great! I'll look in to the capistrano-part and get it fixed with my rails app. Right now i edit a file, find it in the finder and upload it manualy... :)",2,Spiken,2,0
+113,Deploying_my_first_rails_site,"Any issues with hostingrails.com?",1179928951,"I've started looking for rails hosts. Now that things are running, have you noticed any problems with Hostingrails.com?",2,"Joe Cotellese",2,0
+113,Deploying_my_first_rails_site,"Re: Any issues with hostingrails.com?",1179931568,"Hi Joe, no problems, but I'm not really in a position to answer because its still a sandbox for me and I havent yet deployed a live site.",2,Anonymous,2,0
+112,kill_-9,"kill -9",1179384051,"My girlfriend and I are making love to this song right now.",2,"Blade Conway",2,0
+112,kill_-9,"kill -9",1179785783,"do you usually call your right hand for your girlfriend?",2,Anonymous,2,0
+110,Using_Subversion_and_Rails,"Using Subversion and Rails",1194465558,"As far as Mac tools - svnX has a nice repo browser, but the client isn't that great - you should take a look at http://www.syntevo.com/smartsvn/
+
+",2,Steve,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1175074119,"Change
+@section = @page.relatives 
+
+to
+@relatives = @page.relatives
+
+Tom",2,Tom,2,0
+109,A_Micro-CMS_in_Rails,"Re: A Micro-CMS in Rails",1175088254,"oops, right. Fixed it in the article. thx.
+It makes you think though, which would be more semantically correct, to name the variable ""relatives"" or ""section""? :)
+",3,linoj,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1177574007,"nice tutorial. ;p",2,Carmelyne,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1191718397,"What about urls? Have you been able to reflect the hierarchy in the url as well? Ex: parent/child/grand-child",2,"Arik Jones",2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1191765036,"Arik, good question. I havent tried it myself, but I'd probably route to the top level page, and permit optional level2 and level3 names as params, something like  /:id/:level2/:level3 . Then in the show action, find the child of params[:id] with name params[:level2], and find the child of level2 with name params[:level3]. According to the Agile book (2nd edition- may'07, p 401) in routes.rb, you can add :level2 => nil, :level3 => nil to map.connect to make them optional.",3,linoj,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1192153257,"fyi, there are follow up articles here too
+http://www.vaporbase.com/postings/Micro-CMS%3A_Page_Content_using_Model_Methods
+and
+http://www.vaporbase.com/postings/Enhancements_to_Micro-CMS",3,linoj,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1199245148,"For rails 2.0
+
+script/generate resource Page",2,tresero,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1199256624,"OOPs I meant 
+script/generate scaffold Page name:string title:string body:text parent_id:integer position:integer 
+
+I also added some constraints for not null title and name.
+
+How hard would this be to change to add arbitrary routes from the same controller (i.e. /pages/page /articles/page etc.)
+
+",2,tresero,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1209161711,"Wonderful - a complete newbie and you have made me understand everything!
+One question/help needed: my ""up"" and ""dn"" links do not seem to work - I get the following error......
+
+Unknown action
+
+No action responded to higher
+
+-----
+
+what am I doing wrong?",2,liam,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1209162235,"Sorry!!! My fault - I was missing the last ""end"" in the pages_controller.rb",2,liam,2,0
+109,A_Micro-CMS_in_Rails,"showing hierarchy",1219533468,"1) Thank you for this awesome walkthrough/tutorial/example set!
+
+2) One limitation of the acts_as_free design here is that it only shows one level of hierarchy (no matter now many levels you have).
+
+Here's a three-line block that fixes this: it replaces a two-line block in _index_item.rhtml - the middle line is the new one. (May be an easier way to do it - I made it more explanatory.)
+
+<% unless index_item.children.nil? %>
+<% if (prefix.nil?) then prefix = '|--' else prefix = prefix + '|--' end %>
+<%= render(:partial => ""index_item"", :collection => index_item.children, :locals => {:prefix => prefix} )%>
+",2,Scott,2,0
+109,A_Micro-CMS_in_Rails,"Performance issues",1222144631,"It's worth noting that this code does a single SQL query for every page (to see if it has children). This makes rendering the page list very slow.
+
+It would make sense to create an array at the top with all of the pages with children, and check that, rather than doing the index_item.children.nil? check on every line in the recursion. If I do this, I'll provide the code.",2,Scott,2,0
+109,A_Micro-CMS_in_Rails,"Performance Improvement",1222441395,"FYI, as above, I've posted code for reducing the number of SQL queries and massively speeding up the page. It's at http://scottru.com/2008/09/26/vaporbase-micro-cms-performance-improvement/ .
+
+Again, thanks for the great work!",2,ScottRu,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1235648298,"Hi dude..
+Im having a doubt..
+just like in windows environment when we open mycomputer (windows+E) it will display in frame format, in left side there will be tree with folders.
+when we click on that ""+"" symbol, it changes to ""-"" and then a tree will be displayed right?
+can we get the same ""+"" and ""-"" thing in ruby??????
+when we click ""+"", then only we must get the sub folders of that folder??, if we can do please mail me at mca.jayanth [at] gmail.com   :::::::: replace [at] with @::::::::::
+
+pls make this clarified.
+
+Thanks in advance.",2,Fortevast,2,0
+109,A_Micro-CMS_in_Rails,"A Micro-CMS in Rails",1280482861,"In my page's model, i have a column 'private'
+in  the page relatives method, how find childrens only column private = 0 ?
+Thks",2,fusco,2,0
+104,Rails_and_Django_-_Conclusions_%28part_15%2F15%29,"Rails and Django - Conclusions (part 15/15)",1185383443,"Great work! I would like to see symfony/PHP5 in this eval, it's another very good web framework with many features and a good comunity.",2,Eriksen,2,0
+104,Rails_and_Django_-_Conclusions_%28part_15%2F15%29,"Rails and Django - Conclusions (part 15/15)",1197074402,"Thanks, as a rails guy I found the comparisons to Django really interesting.",2,"Paul Sullivan",2,0
+104,Rails_and_Django_-_Conclusions_%28part_15%2F15%29,"Rails and Django - Conclusions (part 15/15)",1198015406,"Now the Django book is out, and a lot of the new things are in (newforms, ModelForm etc.), it might be time for a refresh of the very useful information in this comparison.
+
+But thanks for doing this - it's a moving target with both environments evolving fast.
+",2,"Tim Barnes",2,0
+104,Rails_and_Django_-_Conclusions_%28part_15%2F15%29,"Rails and Django - Conclusions (part 15/15)",1199448527,"Documentation: Rails 4 x 3 Django.
+That's not correct. Please, revise this!",2,"Alberto Carvalho",2,0
+104,Rails_and_Django_-_Conclusions_%28part_15%2F15%29,"Rails and Django - Conclusions (part 15/15)",1220822562,"Great article, I read it all.",2,Henrique,2,0
+104,Rails_and_Django_-_Conclusions_%28part_15%2F15%29,"Rails and Django - Conclusions (part 15/15)",1231703342,"Nice work, as a python/django guy I think I should try out ROR soon.",2,Mike,2,0
+104,Rails_and_Django_-_Conclusions_%28part_15%2F15%29,"Rails and Django - Conclusions (part 15/15)",1233065916,"Bravo, bravo... you helped me a lot ;)",2,Gabriel,2,0
+104,Rails_and_Django_-_Conclusions_%28part_15%2F15%29,"Rails and Django - Conclusions (part 15/15)",1250418341,"Very interesting, even today! Wonder if someone can update the 15 different parts with Django 1.1 and Rails 3.0 in the winter.",2,"Mark Stahler",2,0
+104,Rails_and_Django_-_Conclusions_%28part_15%2F15%29,"Rails and Django - Conclusions (part 15/15)",1250418794,"Very interesting, even today! Wonder if someone can update the 15 different parts with Django 1.1 and Rails 3.0 in the winter.",2,"Mark Stahler",2,0
+103,Rails_and_Django_-_Development_Cycle_%28part_14%2F15%29,"Rails and Django - Development Cycle (part 14/15)",1214373057,"I'd rate rails as 2 and django as 1.
+
+Neither one is anywhere near the ""upload your files"" simplicity of php.  Even with mod_python or mod_rails you still dont get the magic that php does.  both of these frameworks are seriously lacking in the deployment world.
+
+Successfully deploying a project in either one of these frameworks is like swimming against the current.  mod_rails is only ""wonderful"" because before mod_rails life really sucked.  Capistrono might be wonderful, but setting it up in the first place is no pic-nic.
+
+Deployment without ssh (or direct) access to your server is impossible, and experience with unix file permission commands is required.  good luck getting support from a hosting company with deployment of an app in either framework.",2,"Brent Larsen",2,0
+103,Rails_and_Django_-_Development_Cycle_%28part_14%2F15%29,"Rails and Django - Development Cycle (part 14/15)",1218315472,"@Brent: Say what? I'd be very eager to hear which part of Phusion Passenger (mod_rails) isn't ""upload and go"". Deploying an app with Phusion Passenger is a matter of:
+1. Upload your application.
+2. Point the corresponding virtual host's DocumentRoot to the app's ""public"" folder.
+There is no step 3.",2,"Hongli Lai",2,0
+103,Rails_and_Django_-_Development_Cycle_%28part_14%2F15%29,"Rails and Django - Development Cycle (part 14/15)",1231703173,"Same for python/django. 
+
+While developing I'm making changes and checking the results instantly by mapping the test server's FS. PHP and Ruby can do this too.
+
+We have an installer that installs our django system and all deps. Just one click. There is no step 2.",2,Mike,2,0
+106,Rails_and_Django_-_User_Extensions_%28part_13%2F15%29,"Rails and Django - User Extensions (part 13/15)",1175601451,"<p>Dude, check your facts.</p>
+
+<p>""Presently Plugins cannot contain models"" is simply wrong. Cf:</p>
+
+<p>http://svn.viney.net.nz/things/rails/plugins/acts<em>as</em>taggable<em>on</em>steroids/lib/tagging.rb</p>
+
+<p>Yup, tagging.rb is a model class, and yes, it is part of acts<em>as</em>taggable<em>on</em>steroids, a working Rails plugin.</p>
+
+<p>Moreover, citing Rails Engines as a more powerful alternative to regular plugins is also wrong, cf:</p>
+
+<p>http://rails-engines.org/news/2007/01/03/engines-are-dead-long-live-engines/</p>
+
+<p>by Rails Engines author: ""When Rails 1.2 is released, the notion of 'installing an engine' will become meaningless. Let me make that really clear - there will be no meaningful distinction between an engine and a plugin anymore.""</p>
+
+<p>So Engines itself is <em>just a plugin</em>. You might have had there point about 6 months ago, but this article is dated March 17th, long after 1.2 was released.</p>
+
+<p>So plugins do let you create mini-applications, complete with Models, Controllers, and views. Whether the Django approach adds any value beyond Rails plugins is a theoretical discussing worth holding, but only after we got the actual facts straight.</p>
+
+",2,Someone,2,0
+106,Rails_and_Django_-_User_Extensions_%28part_13%2F15%29,"Rails and Django - User Extensions (part 13/15)",1175606932,"Thanks for the clarification. Writings about plugins vs engines (vs components, <a href=""http://revolutiononrails.blogspot.com/2007/01/plugems-rails-as-first-class -citizens.html"">""plugems""</a>, etc) is confusing, to me at least.
+
+",3,linoj,2,0
+106,Rails_and_Django_-_User_Extensions_%28part_13%2F15%29,"Rails and Django - User Extensions (part 13/15)",1188586759,"I just wanted to let you know you have a typo in your link to Django apps, which leads to a non-existent page.  The correct link, without the comma at the end:
+http://code.djangoproject.com/wiki/DjangoResources",2,ericb,2,0
+102,Rails_and_Django_-_Documentation_%28part_12%2F15%29,"Rails and Django - Documentation (part 12/15)",1185882013,"I think it's rather unfair to say that Rails' documentation is as good as Django's. The Django Documentation *far* outscores that clumsy API-*manual* of Rails.
+
+I agree with you that the lack of screencasts is rather annoying.",2,"Henrik Lied",2,0
+102,Rails_and_Django_-_Documentation_%28part_12%2F15%29,"Rails and Django - Documentation (part 12/15)",1197209110,"I agree with all your points but i completly disagree on this one.
+
+I had realy hard time with the online documentation of Rails. The API documentation remind me the terrible javadocs. It's not usable. Toturials are a bunch of article here and there. seriously?
+
+Django documentation is, IMHO, more user friendly. It's centralised, well organised and up to date. Tutorials are very well written.
+
+Screencast for Django are lacking, but for me it's more a marketing material, not a real piece of documentation.",2,"Batiste Bieler",2,0
+102,Rails_and_Django_-_Documentation_%28part_12%2F15%29,"Rails and Django - Documentation (part 12/15)",1197237264,"Batiste, if we only look at official online docs, I completely agree. But the big picture is more than official docs. The Rails community is pretty prolific (for example, contributed tutorials http://railsforum.com/viewtopic.php?id=6790). Also tutorial screencasts can be very valuable to developers, not marketing (see http://www.railscasts.com/)",3,linoj,2,0
+102,Rails_and_Django_-_Documentation_%28part_12%2F15%29,"Rails and Django - Documentation (part 12/15)",1199448788,"Documentation: Rails 4 x 3 Django. That's not correct. Please, revise this!",2,"Alberto Carvalho",2,0
+102,Rails_and_Django_-_Documentation_%28part_12%2F15%29,"Rails and Django - Documentation (part 12/15)",1214372108,"Yeah, I agree. its more like 3x4 instead of 4x3.
+the agile rails book is out of date, the scaffolding commands in the first few chapters completely fail and dont even have a decent work around, you just have to skip that section, except the whole book builds on it.   Rails doesn't remain backward compatible with itself from version to version, and so many tutorials are out of date or don't even work anymore.
+
+Also, most rails tutorials are built around magic, so if you need to do anything more than what the tutorial shows, you are up a creek without a paddle because moving from magic to solid ground is difficult.
+
+The django docs are easier to traverse after you have read them. When you go back to repeat on another project, it is easy to find the  meat in the django docs, they are just laid out better and separate the discussion from the action so it is easy to find the parts that you need later.  They do a better job of hitting related topics all at once rather than sprinkling them all over the book so you never find them once you have read them the first time.
+
+Both do a good job of explaining with real world examples.
+
+I'd give 100 books that suck for one that is worth reading.  Quantity of ""documentation"" is irrelevant, if not an actual hindrance.
+
+Up to this point, I have agreed 100% with every rating, but this one is off, you should fix it.
+
+Also, I wouldn't mind if the one about admin frameworks was updated now that both have had time to stabilize a bit.  newforms is out, and rails has had time to clean up to.  an update there would be nice (they are certainly better than 2's)",2,"Brent Larsen",2,0
+102,Rails_and_Django_-_Documentation_%28part_12%2F15%29,"Rails and Django - Documentation (part 12/15)",1220822239,"Sorry. Django (and Python overall) have much more, and better, documentation. All Rails does have great are books, to get you started. Once you go serious on the business, and you need access to API, it starts sucking.",2,Henrique,2,0
+105,Rails_and_Django_-_Data_and_User_Administration_%28part_9%2F15%29,"Rails and Django - Data and User Administration (part 9/15)",1220822108,"The reason for not including much user registration/auth in the core of both frameworks is that they don't wanna be responsible for security flaws. You can imagine how bad this can be, when a flaw is found and there are literally thousand sites using those frameworks in affected versions.",2,Henrique,2,0
+105,Rails_and_Django_-_Data_and_User_Administration_%28part_9%2F15%29,"Rails and Django - Data and User Administration (part 9/15)",1231702437,"@Henrique - good point.
+
+I think flawed security is much better than no security. Therefore there is not much excuse for them not having a better security. I think the real problem in django is that there is no framework for registering views. In admin there is a framework for registering models and modeladmins, but there is no easy way to get a list of view functions. Until this list can be got hold of, there is no easy way of controlling user's access to views. <br />
+ 
+<p>Another approach, is restricting user access to object attributes on blocked/readonly/editable basis and there is also no support for this in django yet. This is coarse grained but works for most situations and is very easy to audit. <p/>
+
+Another point is ad hoc control - like authors only being able to edit their own comments. This could easily be solved by building sets of conditional methods and passing them unbound to decorators, or better still, make views classes (which they should be) and put them in as lists of checks as class attributes.",2,Mike,2,0
+98,Rails_and_Django_-_Templates%2C_Forms_%28part_8%2F15%29,"Rails and Django - Templates, Forms (part 8/15)",1220821877,"You need really to check out Django's 1.0 newforms and then rewrite this part. Writing plugable, reusable forms is great.",2,Henrique,2,0
+98,Rails_and_Django_-_Templates%2C_Forms_%28part_8%2F15%29,"Rails and Django - Templates, Forms (part 8/15)",1231698938,"Django's template system looks nice but, frankly, overdoes it to the point where you can almost guarantee maintenance and usability issues down the line. 
+
+Case in point - look at the numerous built in template tags. ""Great"", you might think, ""there are all these tags that let me do all this stuff. I can put all the display logic in the template."" 
+
+Wrong. 
+
+What happens is beginners get lulled into trying that, and sure it works great for a few forms or simple pages. But as soon as they need to do anything remotely hard, they simply get stuck, cos the template system just isn't up to much. Then they might try implementing their own template tag libraries, and before you know it, they have embarked on writing their own sucky programming language inside the template system. They would be much better off with PHP. In fact I wonder if some of the django developers who left this stuff in have PHPness-envy.
+
+Just ask yourself - {% ifequal %}... {% ifnotequal %}? 
+WTF??
+
+{% includes %} in django templates are also deadly. They create highly coupled and fragile designs. Why couple your view code to just one template when you can couple it to two? Even better when you can add in your own crazy template tag scheme to make up for shortcomings in what django's own.
+
+It's so confused because the display logic is forced to live in 2 places - inside the view, and also inside the template. No attempt is made to clarify how the display logic should be divided up. Model Template View and claiming that the definition of MVC is debatable just doesn't cut it these days. (http://docs.djangoproject.com/en/dev/faq/general/)
+
+The attribute lookup rubbish with {{ x.y.z }} is also deadly in much the same way. It creates fragile designs by ignoring the most fundamental aspect of OOP - encapsulation. Sure, lets rip attributes off stuff at will. Oops we get the schema a bit wrong... guess we'll just have to rewrite those 50 templates we made last months...
+
+In short - django would have been far better off leaving all this stuff out and going for a proper OO approach, and being clear about what renders what. Templates should be simple, simple enough for a designer to understand and simple enough that they can't also break things - allowing attribute lookup potentially puts *everything* at the whim of the template. Yup, this means the security nightmare where a designer gets a shot at screwing up your database by using the wrong attribute. We were wondering why the team members seemed to multiply each time we looked at the team list page. It was because someone had used the wrong method as an attribute, and it was re-saving the members on each request. 
+
+As for newforms - what a mess! Try this: run a find in django/forms/models.py for ""inlineformset_factory"" (django v1.0). Once you understand what it is doing, you will agree there can be few more convoluted ways of doing what is really not a very complex task. 3 levels of factories for one class? Building the exact same ModelForm classes over and over again on *each and every* request? Having 2 separate classes generate the queryset? Functions taking 15 arguments? django's newforms is textbook bad OO design, python or no python.
+
+And please, don't tell me to rewrite it. I was already forced to rewrite a lot of the core code, before our client pulled the plug on our django-powered site entirely, and before we all lost our jobs. Hopefully I will get some time to offer it up to the django gods soon.
+",2,Mike,2,0
+98,Rails_and_Django_-_Templates%2C_Forms_%28part_8%2F15%29,"Re: Rails and Django - Templates, Forms (part 8/15)",1265979813,"Wow, so your project failed and you got fired because django's template system is not object oriented enough.  Sorry about your job... but really?  Lots of sophisticated sites seem to manage to work around these glaring shortcomings.",2,"Alex N",2,0
+98,Rails_and_Django_-_Templates%2C_Forms_%28part_8%2F15%29,"Rails and Django - Templates, Forms (part 8/15)",1264986392,"Wow, you really seem to hate django.",2,"Izz ad-Din",2,0
+97,Rails_and_Django_-_Routing_and_Controllers_%28part_7%2F15%29,"Rails and Django - Routing and Controllers (part 7/15)",1174269411,"Rails routes have regular expressions allowed. It is discussed right on the first page of the Routing manual - scroll down to ""Example 2."" Sure, they don't explicitly use the term ""regular expressions,"" but any programmer would recognize the perl-compatible regex immediately.
+
+Second, Rails controllers sure as heck are ""decoupled"" from route URLs under your definition. Your one example may not be, but the following route,
+
+map.connect 'product/:id', :controller => ""system"", :action => ""fetch""
+
+sends all requests to 'product/x' to the System controller and calls the ""fetch"" action.
+
+This entire evaluation seems to be very, very poorly researched.",2,Hox,2,0
+97,Rails_and_Django_-_Routing_and_Controllers_%28part_7%2F15%29,"Rails and Django - Routing and Controllers (part 7/15)",1174321790,"Hox: you're right, I misunderstood Rails routes. I believe the doc you refer to is here ( http://manuals.rubyonrails.com/read/chapter/65 ) I plan to redraft that section. ",3,linoj,2,0
+97,Rails_and_Django_-_Routing_and_Controllers_%28part_7%2F15%29,"Rails and Django - Routing and Controllers (part 7/15)",1236288264,">>This entire evaluation seems to be very, very poorly researched. 
+<br/>
+Oh give me a break.  It's good enough for a nice overview, and very appreciated.",2,sam,2,0
+96,Rails_and_Django_-_Database_and_Models_%28part_6%2F15%29,"Rails and Django - Database and Models (part 6/15)",1173147128,"The Rails approach makes it impossible to integrate with legacy databases?
+
+I don't see how this is true. A legacy database may not follow the naming scheme of Rails, but all names are easily overridden in the model definitions.",2,carlivar,2,0
+96,Rails_and_Django_-_Database_and_Models_%28part_6%2F15%29,"Rails and Django - Database and Models (part 6/15)",1173277402,"Rails migrations are a bluff. They just adds complexity to simple stuff and don't work when things are really difficult. Django is more practical in this regard. I really don't need migrations.",2,Nico,2,0
+96,Rails_and_Django_-_Database_and_Models_%28part_6%2F15%29,"Rails and Django - Database and Models (part 6/15)",1220821657,"@carlivar:
+
+Yes, the names can be overiden, but you lose much Rails magic in that - which pretty much defeats the point of using it.
+
+
+I miss a way of doing schema migration on Django, it takes valuable time doing by hand. The pluralization, on the other hand, annoys more than help when you're not writing in English, so for international developers it's a non issue.",2,Henrique,2,0
+96,Rails_and_Django_-_Database_and_Models_%28part_6%2F15%29,"Rails and Django - Database and Models (part 6/15)",1221669785,"Just released - migrations for Django 
+
+http://code.google.com/p/dmigrations/",2,"Lou K.",2,0
+96,Rails_and_Django_-_Database_and_Models_%28part_6%2F15%29,"Rails and Django - Database and Models (part 6/15)",1231699847,"All the migrations stuff in ruby (and now django) and the daft syncdb for django could have been obviated if they had used 6NF database modelling, like anchor modelling. Porting legacy schemas would be much easier too. Let's hope this feature finds its way into a future ORM.",2,Mike,2,0
+95,Rails_and_Django_-_Installation_%2F_Directory_Structure_%28part_5%2F15%29,"Rails and Django - Installation / Directory Structure (part 5/15)",1178447480,"Using the plugin structure (with some extra monkey patching) you can actually create a sort of module system. We've done so, Revolution on Rails are talking about a similar system (plugems) and Rails Engines (an open source plugin although a bit different)
+
+So it's very possible to have a more modular system where you group controllers/models/views. It's just that the core team doesn't see it that way...",2,Marcus,2,0
+95,Rails_and_Django_-_Installation_%2F_Directory_Structure_%28part_5%2F15%29,"Rails and Django - Installation / Directory Structure (part 5/15)",1220821321,"The decoupled, per-application structure of Django, comes from the Python culture of ""import"" in dottted syntax. It helps a lot for version control and reusing applications between projects. In the end, it's much more DRY than Rails.",2,Henrique,2,0
+94,Rails_and_Django_-_Framework_Concept_%28part_4%2F15%29,"Rails doesn't remind me of Windows",1174811259,"Yes, Windows was an ""any man's operating system"", but I would rather say that Rails reminds me more of OS X — it's not just magic, it's magic that really works well. Rails has a beautiful, shiny design and easy access to advanced technology for any user regardless of his experience — this is (by chance?) also a distinguishing characteristic of Mac and OS X culture.",2,"Three-eyed Fish",2,0
+94,Rails_and_Django_-_Framework_Concept_%28part_4%2F15%29,"Rails and Django - Framework Concept (part 4/15)",1220821195,"When your application goes live, and it breaks misteriously, and you go screaming thru the office to debug it... Thank god for knowing exactly what's going on in your application so you can pinpoint where the problem is. Too much magic only helps the newbie quickstarting the application, but wastes a much precious time ahead.",2,Henrique,2,0
+94,Rails_and_Django_-_Framework_Concept_%28part_4%2F15%29,"Rails and Django - Framework Concept (part 4/15)",1231700124,"I agree with Henrique. We don't need magic, we need simplicity, usability and extensibility. It buys you much more than any clever magic or sleight-of-code in the end.",2,Mike,2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1172762727,"My main beef with Ruby is that it's too much like Perl -- if you give the same task to five programmers, they come up with 5 different ways of doing it, and the other 4 can't read it at first.  I started using Perl in 1996 and left it behind for Python a long time ago; Ruby is neat but it seems like a step backward somehow.",2,"vs. Perl",2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Re: Rails and Django - Programming Language (part 3/15)",1173073385,"Having moved from Perl to Python to Ruby (over several years), I can see your point.  However, I view Ruby as ""Perl done right"".  
+
+I find I'm blazingly productive in Perl, but code I've written 6 months ago is unintelligible, even to me, even when I've tried to make it as clear as possible, unless I refer back to my own documentation.  With Python, I sacrifice a chunk of Perl's productivity, but get code that's much easier to understand (the ""there's only one way to do it"" philosopy at work helps a lot).
+
+With Ruby, and by extension Rails, I find I get the best of both worlds - the productivity of Perl, with the readability of Python.  Don't get me wrong - on a scale of e.g. 10, I'd rate Ruby a 9 and Python an 8-8.5, but my productivity with Ruby would beat out my productivity with Python and that's a very big consideration.",2,Anonymous,2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Re: Rails and Django - Programming Language (part 3/15)",1220783835,"If you like just one way to do some thing maybe you should consider FORTRAN. It's good way to force people writing the codes in the same way. ""Too mych like Perl""!?!?!?",2,Helio,2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1172765190,"I just hate Ruby code. No fun there I can tell you. If you switch from python to ruby you are not annoyed with small things but with everything! Sucks I'm telling you. Python code is so nice and fluent and when you take look at the code you see what it does... ",2,jesus,2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1172950349,"Decent overview and kudos for being fair-handed. My only nit? You underrated the fun factor. A happy coder is a productive coder.
+
+Discovering ruby will make the most jaded perl/java/c#/etc... developer rediscover why they ever loved programming in the first place.
+",2,mohammed,2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1173222774,"You are incorrect in claiming Ruby is not strongly typed.
+
+(You write that it indeed is strongly typed on one occasion, and then later turn around and write that it isn't.)
+
+Ruby is strongly and dynamically typed. Period.",2,"Tomas Jogin",2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1173225053,"Tomas, you're right, in the sense that you can do 1+2, and 'a'+'b', but not 'a'+2. Perhaps I'm confusing dynamically typed with not-strongly-typed, e.g. Ruby does not have typed method parameters or return values. 
+
+In my defense :) according to wikipedia ""these terms have been given such a wide variety of meanings over the short history of computing that it is often difficult to know what an individual writer means by using them."" http://en.wikipedia.org/wiki/Strongly_typed",3,linoj,2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1173260529,"I'm right in the sense that Ruby is strongly typed and there is no doubt about that. Strong typing is different from static typing. If you meant to say that Ruby is not statically typed (it's dynamically typed), just write that and leave strong typing out of it.",2,"Tomas Jogin",2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1173260682,"You wrote that Ruby is not strongly typed because ""data types share many of the same methods"". This is completely and utterly unrelated to whether Ruby is strongly typed or not. Just because Ruby makes an effort to be consistent does not mean that the language is not strongly typed.",2,"Tomas Jogin",2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1173628331,"Thomas, thanks for the feedback. I have corrected the article to say both Ruby and Python are both strongly-typed and dynamically-typed.",3,linoj,2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1220820728,"You only compared the language's syntax, there's room for comparing their performance and portability aspects. Python washes Ruby out of the wall on those aspects.",2,Henrique,2,0
+93,Rails_and_Django_-_Programming_Language_%28part_3%2F15%29,"Rails and Django - Programming Language (part 3/15)",1231701564,"I don't know about ruby but but python is a great general purpose language. I have friends who are ruby people and they say ruby is great and I am sure it is. I use python every day, and my friends seem to treat me as the python geek for language wars.
+
+Regarding performance; with psyco, django is wonderfully quick.
+
+
+The big problem I have with python is the lack of encapsulation support. This is especially a problem with django's template system where template designers can get their dirty hands on your object's private parts. One way is to prefix with an underscore, but it seems clumsy and hacky and leaves your code none the prettier. All in all, without encapsulation, python can't call itself a real OO language, but it doesn't do badly.
+
+
+
+The other big problem, and related to this, is isinstance().
+
+
+
+Type sniffing with isinstance is, I would say, not a crime but a tragic and filthy habit worse than using switch statements. Few things wreck flexibility more.
+
+
+ 
+So, want to know how well written django really is? grep a django checkout for ""isinstance"". Last time I checked there were over 600 usages! Now consider that  in python 2.1.1 there were only 68 usages, mostly in test code testing that it worked... you get the picture. Here's more info:
+
+http://www.canonical.org/~kragen/isinstance/
+
+
+So we can see, django has a *serious* addiction to sniffing types. Sure it gives it that 'quick fix' to get it through the releases but one day it will wake up, look in the mirror and realise it badly needs a few months at the refactoring spa.
+",2,Mike,2,0
+107,Selling_e-downloads,"Selling e-downloads",1235400414,"The e-junkie solutions seems interesting and it doesnt cost that much. nice article",2,Alex,2,0
+107,Selling_e-downloads,coupons4save.com,1244217431,"coupons4save.com coupons, discounts and promotions on this page. Usually, you redeem coupons4save.com coupon or discount offer, by just clicking on the offer link. If there's coupons4save.com coupon code or promo code with an offer, 
+then you must do the additional step of entering the discount coupon code on the coupons4save.com online store site to 
+redeem it.",2,gopideals,2,0
+107,Selling_e-downloads,deals4now.com,1264314336,"deals4now is the best source for coupons",2,siva,2,0
+107,Selling_e-downloads,www.freecouponsbuzz.com,1264314379,"this information is useful.",2,vasu,2,0
+107,Selling_e-downloads,"Selling e-downloads",1264314477,"nice article.",2,www.couponbrowse.com,2,0
+92,Rails_and_Django_-_Project_and_Community_%28part_2%2F15%29,"Rails and Django - Project and Community (part 2/15)",1172601813,"Django's pre-1.0 status is a design choice that can be misleading to outsiders.  It's lack of a '1.0' badge is not an indication of code quality or functionality.
+
+Disclaimer: The following is not a comparison of Django to Rails... I have almost no experience with RoR, and am not trying to say Django is better. I'm just trying to provide a bit more background that the article misses.
+
+The Django crowd wants to -get it right- rather than get 1.0 out the door.
+
+It would have been possible to (and many projects likely would) call the code base prior to the refactoring effort ""1.0"".  However, there are strong convictions in the Django community regarding functionality and backward compatibility.
+
+The developers of Django have gone to excruciating lengths to ensure that the development branch is unbroken, thus there has been no immediate pressure to go v1.0.  As you mention, many production sites are using Django, with great success.  The lack of a 1.0 moniker should not turn potential users away.",2,Hawkeye,2,0
+92,Rails_and_Django_-_Project_and_Community_%28part_2%2F15%29,"Rails and Django - Project and Community (part 2/15)",1172606311,"FYI, Railsconf 2007 sold out 1200 seats.
+
+Anyhow, I'm excited to see the remaining parts of your comparison...the meat if you will, as well as what your final conclusion was. Keep it up.",2,"Anthony Eden",2,0
+92,Rails_and_Django_-_Project_and_Community_%28part_2%2F15%29,"Rails and Django - Project and Community (part 2/15)",1253518853,"Its interesting that, as of Sept 2009, the Google Groups membership has gone up to 19 thousand and 15 thousand respectively for Rails and Django.  One has doubled in size and the other has tripled.",2,Derek,2,0
+91,Evaluating_Web_Development_Frameworks%3A_Rails_and_Django_%28part_1%2F15%29,"How can you be objective?",1172599126,"How can you possibly be objective with a nebulous category like ""Programming Language""?
+
+How are you weighting each category? Or do you consider ""Framework Concept"" to be equally important to ""RSS/Atom""?
+
+Know what would be neat? An interactive form where people can assign values based on what is important to them in a framework, and have those be multipliers to your score. Everyone gets a personalized output.",2,"Mark Thomas",2,0
+91,Evaluating_Web_Development_Frameworks%3A_Rails_and_Django_%28part_1%2F15%29,"Re: How can you be objective?",1172607010,"Maybe you get the objective version of this ""whitepaper"" in the $15 version linked on the side!",2,Gor,2,0
+91,Evaluating_Web_Development_Frameworks%3A_Rails_and_Django_%28part_1%2F15%29,"Evaluating Web Development Frameworks: Rails and Django (part 1/15)",1172601595,"You're right. One's evaluation will at least be partially subjective, and ratings could be weighted. The objective parts will be fact-based, the subjective parts would be based on your own preferences and priorities. (And you'll see, I sort of cheat w/r/t RSS and some other minor features). In many ways, its the process of evaluation that's most telling rather than the final quantitative rating. ",3,linoj,2,0
+91,Evaluating_Web_Development_Frameworks%3A_Rails_and_Django_%28part_1%2F15%29,"Evaluating Web Development Frameworks: Rails and Django (part 1/15)",1172607972,"Seems to me like it all comes down to language preference. Python or Ruby. Pick your favorite language, and you'll love either framework.",2,jc,2,0
+91,Evaluating_Web_Development_Frameworks%3A_Rails_and_Django_%28part_1%2F15%29,"Re: Evaluating Web Development Frameworks: Rails and Django (part 1/15)",1172636666,"jc: Did you read the last section already?  not fair!  yes, that's part of it :)
+
+ben: Sometimes the most objective perspective comes from those who are seeing things fresh. That's what I'm bringing to the table. It may be a fleeting advantage, and that's why I've tried to capture it in writing now.",3,linoj,2,0
+91,Evaluating_Web_Development_Frameworks%3A_Rails_and_Django_%28part_1%2F15%29,"Have You Actually Used Something Like This?",1172610001,"While I can appreciate where you are going with this I have to agree with Mark Thomas on this one.  Your disclaimer states...
+
+""Disclaimer: While I come at this with a significant level of experience, this report is the result of my review without the benefit of having built a real project with either framework. ""
+
+You've kind of lost me there.  Plus, from a Technical Manager's perspective, there's a lot more to consider than just these two languages.  And there's more to consider in the environment (existing skill sets, infrastructure, legacy apps, etc.).
+
+Maybe I'm jumping the gun a bit and will get a chance to see this later in the series.
+
+Ben
+http://bencraigo.wordpress.com",2,"Ben Craigo",2,0
+91,Evaluating_Web_Development_Frameworks%3A_Rails_and_Django_%28part_1%2F15%29,"Evaluating Web Development Frameworks: Rails and Django (part 1/15)",1211737300,"I've posted a poll for the two stacks at: http://www.railsordjango.com",2,Dave,2,0
+101,How_to_do_Anonymous_Comments,"How to do Anonymous Comments",1172016055,"be interesting to see how effective your poor man's captcha works out... ",2,boom,2,0
+101,How_to_do_Anonymous_Comments,"How to do Anonymous Comments",1173471888,Test,2,"Tim Stalker",2,0
+101,How_to_do_Anonymous_Comments,"Re: How to do Anonymous Comments",1173471946,"Thanks for this info. This will work perfect for me.",2,"Tim Stalker",2,0
+101,How_to_do_Anonymous_Comments,"Re(1): How to do Anonymous Comments",1175357162,"Yes， try it.",2,"Test Man",2,0
+101,How_to_do_Anonymous_Comments,"How to do Anonymous Comments",1175754425,"Excellent post. I have been looking at tying the Name and Email in with the eBulletin Module so that I can capture that data for possible Newsletter subscriptions (with permission, of course), without them needing to subscribe as a site Registered Member. But as this is a hobby for me, work has intervened again. So this will be a great interim solution until I have free time again, who knows when.
+
+Xaraya would have such a complete Blogging solution if the Formantibot Module could be hooked into Articles (under a Blog Pubtype). If only I had time to learn the Module development side of things. Oh well.
+
+Great Blog, by the way. I've just started with FeedDemon, so your Blog is one of my first feeds. I really like the 15 part Rails v Django series. All very new to me, but great reading.
+
+Keep up the good work!
+",2,"Wayne Walker",2,0
+101,How_to_do_Anonymous_Comments,"How to do Anonymous Comments",1175780930,"I'm wondering what kind of success you're seeing with this solution?? I'm finishing a new blog using Xaraya but hesitant to activate anonymous comments like this. Is this working for you? I see it maybe as a temporay solution until someone can hook Formantibot to comments.",2,"Tim Stalker",2,0
+101,How_to_do_Anonymous_Comments,"How to do Anonymous Comments",1175785451,"Wayne, Thanks for the kudos, I appreciate it. :)
+
+Tim, the anti-spam checkbox is working so far, to the extent I haven't seen any spam.",3,linoj,2,0
+101,How_to_do_Anonymous_Comments,"Testing blank name field",1193466041,"Is there a way to make the name field you created here required. I'm testing this by not entering a name which should still give anonymous in the output. Need to have the name field work like the comment body field. If nothing is entered and a user hits submit, nothing should be entered.",2,Anonymous,2,0
+101,How_to_do_Anonymous_Comments,"Require a name",1193467438,"To require a name, use this script:
+
+<script type=""text/javascript"">  
+	function checkNameBox(f) {    
+		if (f.dd_objectnumberhere.value == """" ) {      
+			alert('Hi. Please provide your name or screen name.');      
+			return false;    
+		} else      
+			return true;  
+	}
+</script>",2,"Tim Stalker",2,0
+101,How_to_do_Anonymous_Comments,"How to do Anonymous Comments",1209547201,Testing...,2,Steven,2,0
+101,How_to_do_Anonymous_Comments,"cheapest digital cameras",1279782328,"iPhone has the best and the most advanced keyboard of the mobile devices. Serena Van Der Woodsen Instruct You to Accessorise Most Spectacular e66 white Just like all small keyboards, users need time to adapt to the iPhone's keyboard. The iPhone users will quickly learn to use the intelligence functions of iPod and automatically modify the input errors. Therefore, all users favor the iPhone's input mode, and have found that their ratio of input speed is not slower than to Treo, BlackBerry or other smart phone or sometimes even faster. Using iPhone's keyboard design, we can use more advanced software to improve the accuracy, and customize keyboard for specific applications, even remove keyboard when necessary. For instance, after removing the keyboard, we can make use of the entire screen to read e-mail, browse the Web, see power diagram, view pictures and movies, and complete other thing we have not recognized. We believe that the keyboard of iPhone is a valuable assets and the <a href=""http://www.fashioniphone.com/blackberry-accessories"">Blackberry Accessories </a>advantage in competition for it.What is Bad for the Shade of E66 Dual SIM ?<a href=""http://www.fashioniphone.com/digital-camera"">digital camera</a>
+",2,"digital camera",2,0
+87,Another_Neat_Example_of_Pageforms,"Another Neat Example of Pageforms",1244336798,sdfsdfsdf,2,ray,2,0
+85,Installing_Rails_on_my_iMac,"Installing Rails on my iMac",1190637932,"The issue with the symbolic link for tmp/mysql.sock<br/><br/>
+
+The way I understand this is that the mysql.sock gets created when mysql starts up. The link gets lost because the file gets deleted somehow, and therefore also the link.
+<br/><br/>
+I found a possible solution that seems to work.<br/><br/>
+
+In the launchdeamons there is a wrapper file for mysql.<br/><br/>
+
+I included the mysql.sock symbolic link in that file in the start section. On reboot it seems the link works.<br/><br/>
+
+Here is the code from the wrapper:<br/><br/>
+<pre>
+#!/bin/sh
+#
+# MacPorts generated daemondo support script
+#
+
+#
+# Init
+#
+prefix=/opt/local
+
+#
+# Start
+#
+Start()
+{
+	/opt/local/share/mysql5/mysql/mysql.server start
+	sudo ln -s /opt/local/var/run/mysql5/mysqld.sock /tmp/mysql.sock
+}
+
+#
+# Stop
+#
+Stop()
+{
+	/opt/local/share/mysql5/mysql/mysql.server stop
+}
+
+#
+# Restart
+#
+Restart()
+{
+	Stop
+	Start
+}
+
+#
+# Run
+#
+Run()
+{
+case $1 in
+  start  ) Start   ;;
+  stop   ) Stop    ;;
+  restart) Restart ;;
+  *      ) echo ""$0: unknown argument: $1"";;
+esac
+}
+
+#
+# Run a phase based on the selector
+#
+Run $1
+</pre>",2,"Koos Brandt",2,0
+83,Utilizing_Sub-Templates,"Utilizing Sub-Templates",1170794395,"Your posting here is similar to something I would like to do. I'd like to include a template(s) from a multi-select list configured via DD and validation from a file. I'm writing files dynamically to the article/includes folder in my theme directory with simple xhtml code and information that I'd like to have display along with articles. I created the multiselect property and it validates fine using the file of values I've created:
+1,item1
+2,item2
+
+etc. But it seems the only way I can get the multi-select property to be displayed is by having to go throuth the showoutput-multiselect.xt template. In this file I can't add the <xar: template tag to include the file from the validation array.
+
+I tried to unserialize the array in the articles display templete but only the item number is returned, not the value in the validation file with it.
+
+Can you think of a way I could add these templates like this? It's easy to do with one template but I'm stumbling over the multi-select showoutput template and how not to use it to get the value of the array into a variable I can use in the articles display template.
+
+Thanks, much.",12,"Tim Stalker",2,0
+82,scheduler,"scheduler and Security",1211432023,"One thing that you will want to keep track of is when you create scheduled functions that require access to restricted content. Your website does not automatically recognize CRON as an administrative user. You will need to create an account for CRON to use and:
+* setting cookie options in your CURL
+* pointing the URL at authsystem/login with the scheduler as the ""redirecturl"".
+
+Example: /usr/bin/curl -L -b /home/miragelab/cookies.txt -c /home/miragelab/cookies.txt -o /home/miragelab/crondump.txt -d ""module=authsystem&func=login&uname=CRONuser&pass=CRONpass&redirecturl=index.php %3Fmodule%3Dscheduler%26pageName%3Dmodule"" http://www.miragelab.com/index.php",2,St.Ego,2,0
+81,Authentication_with_Email_Address_Only,uly@gge.com,1191831356,iyk,2,olo,2,0
+81,Authentication_with_Email_Address_Only,human_resource@ajmangas.com,1193729917,"Please authenticate the e-mail address",2,"Ajman Oil & Gas Corporation",2,0
+77,Ruby-on-Rails_versus_Xaraya,"Just a notice",1174814613,"It's lighttpd, not lighttp.
+If you don't like _why's guide to Ruby, you could have Programming Ruby 1st edition that is also free. Just why shouldn't we have an alternative to that usual strict tutorial style?",2,"Three-eyed Fish",2,0
+71,Handling_Plain_Upload_Fields_in_a_Pageform,"Handling Plain Upload Fields in a Pageform",1172029508,sdsfsfsdfsd,2,asdf,2,0
+66,Pageform_-_a_meta-module_for_xaraya_forms,"Pageform - a meta-module for xaraya forms",1175620138,"I wonder if there are any more recent examples. I cannot seem to get pageform to work at all, no matter what I do. Without a working example, it is just about impossible to see what I could be doing wrong.",2,"Jason Judge",2,0
+66,Pageform_-_a_meta-module_for_xaraya_forms,"Pageform - a meta-module for xaraya forms",1181399299,"Has Jason Judge's concerns been addressed.
+
+Are there recent examples?
+
+Does it work???",2,dg,2,0
+66,Pageform_-_a_meta-module_for_xaraya_forms,"Pageform - a meta-module for xaraya forms",1190509820,"A working example link would be nice!",2,jjl92207,2,0
+66,Pageform_-_a_meta-module_for_xaraya_forms,"Pageform - a meta-module for xaraya forms",1190550488,"Did you not notice this is a multipage article? Examples are on pages 4 and 5. Or are you saying they're not working for you?",3,linoj,2,0
+55,A_general_return_redirect_mechanism,"A general return redirect mechanism",1179498862,"regarding this.... firstly, I've considered something similar (in <xar> tags only), so that I can add an inline ""back"" link to pages.
+
+secondly, to solve the problem of the refresh, would adding an extra holding var and an additional url check not solve the issue?
+
+I mean, if you are taking the previous url... passing it to ""second previous URL"".  As this is done, check to see if CurrentURL = PreviousURL etc... this means that you can tell it to ignore the change, and keep the prior url ???",2,Autocrat,2,0
+55,A_general_return_redirect_mechanism,"A general return redirect mechanism",1214316584,"About Redirect to other web address // html code -- 
+
+http://html-lesson.blogspot.com/2008/06/redirect-to-web-addres.html",2,sezer,2,0
+50,Sorting_items_on_a_field,"Sorting items on a field",1166715876,"Shouldn't the $arts variable be $args? in the xar:set construction or does it make a difference?",12,"Tim Stalker",2,0
+50,Sorting_items_on_a_field,"Sorting items on a field",1166739238,"Hi Tim, the answer is no. First it doesn't matter what you name the variable. But more important, the args are the entire array passed as the 4th parameter; it contains an element 'items'=>$arts 
+",3,linoj,2,0
+42,Dynamic_Extendable_Templates_in_Xarpages,"Dynamic Extendable Templates in Xarpages",1179177494,"Thanks. Very useful",2,Alexander,2,0
+42,Dynamic_Extendable_Templates_in_Xarpages,"Dynamic Extendable Templates in Xarpages",1179179759,"You wrote:
+
+>Note, I had used <xar:module main=""false"" ... tag here, but Jojo says its not good practice and to use the xarModFunc() instead
+
+Why?",2,Alexander,2,0
+42,Dynamic_Extendable_Templates_in_Xarpages,"Dynamic Extendable Templates in Xarpages",1224935298,"Can you plese give me a hint about ho to use the ""bltsubdata"" validation array? I'm not able to make it work.
+",2,Alvaro,2,0
+41,Uploading_files_in_xaraya,"Uploading files in xaraya",1208881775,"I've got uploads configured as a hook to the articles module, and then using the ""body"" field defined as a ""file"".  This all works great: the user can upload files, and I can display the file contents later (either images or audio).
+
+The problem I'm running into is that when the article is deleted, or the user checks the ""clear"" checkbox for the upload... the file never actually gets deleted!  The uploaded file is properly no longer associated with the article, but the actual file is still there and shows up in my list of uploaded files.
+
+It's similar to this message in the xaraya forum (that no one answered): http://www.xaraya.com/index.php/xarbb/topic/2541
+
+Any help would be greatly appreciated!",2,"Steve Switzer",2,0
+41,Uploading_files_in_xaraya,"Uploading files in xaraya",1246283874,"I hate to be a pain ... but I'm attempting to attach Uploads and File Mods.
+To do this with any form of ""flexibility"", I need to be able to supply a different ""upload path"" to the upload module.
+(so if I am browsing to a child directory in Fles, and click on Upload, I can uplaod the file through the Uploads Mod, but place it in the Child Directory browsed to via Files Mod).
+
+Yet I'm not seeing any way todo this.
+
+Is it something you have tried/attempted - or could help shed some light on?
+
+Kindest of regards",2,Clueless,2,0
+39,Adding_ratings_to_articles,"Adding ratings to articles",1265871403,"Hi There,
+
+I came across your Article on the Xaraya Rating Module when I was searching for information on the Xaraya site. I know this is an old post, so I hope you don't mind me posing questions here, as I would like to use the Rating Module and I need clarification on a couple of things.
+
+My initial aim is to use it to Rate against one Publication Type only. But, if I want to extend that to other PubTypes further down the line and to gather data for one or more Top Items Blocks, would I need to use the trick you mention and hook the Ratings Module to all Article PubTypes, then prevent the display of Ratings in the ones not using it? If that's the case, how do I prevent Ratings displaying in the non-ratings PubTypes?
+
+Then the other thing I wasn't clear about is what is displayed on the page. The code snippets you include mention one being placed at the top and the other at the base of the template. Is that an either/or scenario? And as per my first question, the default ""Hooks"" code in a template seems to display all Hooks, so how do you prevent just the Ratings Module output from displaying.
+
+I guess I have a lot more to learn about Xaraya, but I'm a bit confused in particular on these points.
+
+Oh, one final question. Are the ratings displayed (stars) just for that person for that specific session (day)? Is it the totals that are being recorded that are being displayed in the Top Items Block?
+
+Again, I hope you don't mind me posting these questions here.
+
+Cheers,
+
+
+Wayne",2,"Wayne Walker",2,0
+39,Adding_ratings_to_articles,"Adding ratings to articles",1269797909,"Hi, Just a quick note to say that I looked at the code more closely and worked out the reason for the top and lower code segments. I didn't notice the ""<xar:continue />"" when I first looked at the code. And I also figured out what I must do to selectively display the ratings in other display templates. I guess I wasn't thinking clearly when I posed my previous questions. However, with the top display code added, I do get the following error in the Articles Admin only when I attempt edit an Article:
+
+PHP: Error Notice
+
+At: C:\zzxampp\xampp\htdocs\emedia\includes\xarTemplate.php(1177) : eval()'d code (Line: 69) Uninitialized string offset: 0
+
+Any suggestions on why this would happen?  Cheers, Wayne",2,Wayne,2,0
+35,Tabbed_menus_for_xarpages,"Tabbed menus for xarpages",1158546273,"havent i seen this somewhere before
+",7,"Demo User",2,0
+35,Tabbed_menus_for_xarpages,"Tabbed menus for xarpages",1158549442,"maybe, its also posted on the xaraya site",3,linoj,2,0
+35,Tabbed_menus_for_xarpages,"Tabbed menus for xarpages",1158549817,ok,7,"Demo User",2,0
+29,Dog_caught_driving_4-wheeler,"Dog caught driving 4-wheeler",1191707296,lol,2,Anonymous,2,0
+29,Dog_caught_driving_4-wheeler,"Re: Dog caught driving 4-wheeler",1197147670,"this is sooooooooo! cute!",2,kira,2,0
+29,Dog_caught_driving_4-wheeler,"Re(1): Dog caught driving 4-wheeler",1197822676,"Funny dog hes soooooo cute :) very cool ",2,Dan,2,0
+29,Dog_caught_driving_4-wheeler,"Dog caught driving 4-wheeler",1191707329,"i love that dog hes soooo cute whats his name?",2,Anonymous,2,0
+29,Dog_caught_driving_4-wheeler,"Dog caught driving 4-wheeler",1223020333,hkjhlkj,2,Anonymous,2,0
+29,Dog_caught_driving_4-wheeler,"Dog caught driving 4-wheeler",1248121842,"are you retarded??
+dogs hips dont stretch that way
+nice job",2,sasha,2,0
+29,Dog_caught_driving_4-wheeler,"Dog caught driving 4-wheeler",1253725936,"aww that sooooo cute:) hope there having fun there!",2,dan,2,0
+29,Dog_caught_driving_4-wheeler,"Dog caught driving 4-wheeler",1253726038,"i have a dog that look like that but this one is cute
+",2,dan,2,0
+19,Strategies_for_Debugging_in_Xaraya,"Better PHP error messages",1204750546,"From: http://bugs.xaraya.com/show_bug.cgi?id=1978#c3
+
+The proper fix to get better error messages is:
+
+1. Open file html/includes/exceptions/systemexception.class.php
+
+2. Find line 20 or 21 that reads:
+
+        parent::xarException();
+
+3. Add the following line below it:
+
+        $this->msg = $msg;",2,Hb,2,0
+19,Strategies_for_Debugging_in_Xaraya,"Strategies for Debugging in Xaraya",1208265828,"Live debugging of privileges with:
+http://xarsite/index.php?module=privileges&type=admin&func=modifyconfig&tab=test ing",2,Hb,2,0
+18,Compatibility_between_mySQL_4_and_5,"Compatibility between mySQL 4 and 5",1172283569,"Remember to edit the file and set the correct password (optionally hostname and username) near the beginning of mysql-aifix. And thanks for this!",2,Blaisorblade,2,0
+18,Compatibility_between_mySQL_4_and_5,"Re: Compatibility between mySQL 4 and 5",1204638690,"really... thank you!
+I find it really usefull.",2,Emanuele,2,0
+18,Compatibility_between_mySQL_4_and_5,"Compatibility between mySQL 4 and 5",1179145789,"Just thought I would let anyone else looking here know that as of MySQL 5.0.19 the mysql-aifix script is no longer required.  :)",2,Elton,2,0
+18,Compatibility_between_mySQL_4_and_5,"Re: Compatibility between mySQL 4 and 5",1225743694,"If mysql-aifix script is no longer required, how can we get the auto-increment to dump with mysqldump?",2,Keith,2,0
+18,Compatibility_between_mySQL_4_and_5,"Compatibility between mySQL 4 and 5",1183450953,"this is what i was looking for. ",2,"nirvan, guwahati assam",2,0
+18,Compatibility_between_mySQL_4_and_5,"Compatibility between mySQL 4 and 5",1188849079,"THANK YOU!!!! this is perfect! you are a godsend.",2,ben,2,0
+18,Compatibility_between_mySQL_4_and_5,"Compatibility between mySQL 4 and 5",1193559782,"Te felicito, estuve buscando algo asi durante muchas horas hasta que al fin lo encontre, necesitaba pasar una base mysql5 a mysql4 y no lo lograba hacer correctamente.",2,David,2,0
+18,Compatibility_between_mySQL_4_and_5,"Compatibility between mySQL 4 and 5",1193587305,"David's message, through Google Translate:
+	
+I congratulate you, I was looking for something for so many hours until finally I found it, I needed to spend a mysql5 to mysql4 and not managed properly.",3,linoj,2,0
+18,Compatibility_between_mySQL_4_and_5,"Compatibility between mySQL 4 and 5",1198025351,"Thanks a lot, as David, I've spent a lot of time trying to solve this issue until discover your script.
+Again, THANKS A LOT! ... y felices fiestas!",2,over,2,0

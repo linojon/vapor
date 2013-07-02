@@ -1,0 +1,15 @@
+one:
+  title: MyString
+  summary: MyString
+  status: MyString
+  body: MyText
+  counter: 1
+  user_id: 1
+
+two:
+  title: MyString
+  summary: MyString
+  status: MyString
+  body: MyText
+  counter: 1
+  user_id: 1

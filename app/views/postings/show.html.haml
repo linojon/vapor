@@ -1,0 +1,24 @@
+- title @posting.title, false
+
+%article
+  %hgroup
+    %details
+      %time{:datetime => @posting.created_at, :pubdate => true}= @posting.created_at.strftime("%b %d, %Y")
+      %br
+      =raw @posting.categories.collect {|cat| link_to cat.name, postings_path(:category => cat.name) }.join(' ')
+      %br
+      = "(#{pluralize_with_delimiter @posting.counter, 'view'})"
+    %h1= yield(:title) 
+    - if @posting.summary.present?
+      .summary
+        =raw auto_link(uploads_on_s3(@posting.summary))
+  =raw auto_link(uploads_on_s3(@posting.body))
+      
+  - if logged_in?
+    %nav
+      = link_to "Edit", edit_posting_path(@posting)
+      |
+      = link_to "Delete", @posting, :confirm => 'Are you sure?', :method => :delete
+      article
+  
+  = render "comments"

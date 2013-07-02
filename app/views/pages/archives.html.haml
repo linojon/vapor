@@ -1,0 +1,3 @@
+%ul
+  - Category.all.map(&:name).each do |category|
+    %li= link_to_unless @category==category, category, postings_path(:category => category)

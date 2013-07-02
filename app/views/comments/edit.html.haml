@@ -1,0 +1,10 @@
+- title "Edit Comment"
+
+= simple_form_for [@posting, @comment] do |form|
+  = form.input :author, :label => 'Name'
+  = form.input :title, :input_html => { :style => "width:75%" }
+  = form.input :body, :input_html => { :rows => 5, :style => "width:75%" }, :label => 'Comment'
+  = form.input :status, :as => :select, :collection => Comment::STATUS
+  = form.button :submit
+  &nbsp;&nbsp;&nbsp;
+  = link_to "Cancel", @posting

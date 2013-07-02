@@ -1,0 +1,13 @@
+= simple_form_for @posting do |form|
+  = form.input :title
+  = form.input :summary, :input_html => { :rows => 4 }
+  = form.input :body, :input_html => { :class => "tinymce" }
+  = form.input :status, :as => :select, :collection => Posting::STATUS
+  = form.association :categories, :as => :check_boxes
+  = form.button :submit
+  %p
+    Created at: 
+    = @posting.created_at
+  %p
+    Last updated:
+    = @posting.updated_at

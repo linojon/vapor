@@ -1,0 +1,10 @@
+- title "Edit Posting"
+- content_for :head do
+  = tinymce_assets
+= tinymce
+= render 'form'
+
+%p
+  = link_to "Show", posting_path(@posting)
+  |
+  = link_to "View All", postings_path

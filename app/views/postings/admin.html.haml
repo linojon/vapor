@@ -1,0 +1,35 @@
+- body_id 'admin'
+- title "Admin Postings"
+%nav
+  = link_to "New posting", new_posting_path
+%table
+  %thead
+    %tr
+      %th Title
+      %th Status
+      %th Hits
+      %th Comments
+      %th Categories
+      %th Created
+      %th Updated
+      %th Actions
+  %tbody
+    - @postings.each do |posting|
+      %tr{ :class => "#{cycle('even', 'odd')}" }
+        %td= posting.title
+        %td= posting.status
+        %td= posting.counter
+        %td= posting.comments.count
+        %td= posting.categories.collect {|cat| cat.name }.join(', ')
+        %td= posting.created_at.strftime("%b %d, %Y")
+        %td= posting.updated_at.strftime("%b %d, %Y")
+        %td
+          = link_to 'Edit', edit_posting_path(posting)
+          |
+          = link_to 'Show', posting_path(posting)
+          |
+          = link_to 'Delete', posting, :confirm => 'Are you sure?', :method => :delete 
+          
+= will_paginate @postings
+%nav
+  = link_to "New posting", new_posting_path

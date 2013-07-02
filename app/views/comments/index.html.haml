@@ -1,0 +1,51 @@
+- body_id "admin"
+- title "Comments"
+
+= form_tag destroy_multiple_comments_path, :method => :delete do
+  %p
+    = link_to "check all", '', :id => 'check_all'
+    |
+    = link_to "uncheck all", '', :id => 'uncheck_all' 
+    | 
+    = submit_tag "Delete all checked"
+  %table{ :id => "comments_table"}
+    %thead
+      %tr
+        %th
+        %th Post
+        -#%th Title
+        %th Created
+        %th Body
+        %th
+    %tbody
+      - for comment in @comments
+        %tr{ :class => "#{cycle('even', 'odd')}" }
+          %td= check_box_tag "comment_ids[]", comment.id, false, :id => "comment_#{comment.id}"
+          %td= comment.posting.title
+          -#%td= comment.title
+          %td= comment.created_at.strftime("%b %d, %Y")
+          %td= truncate(comment.body, :length => 100)
+          %td
+            = link_to 'Edit', edit_comment_path(comment)
+            |
+            = link_to 'Destroy', comment, :method => :delete
+
+  %p
+    = link_to "check all", '', :id => 'check_all'
+    |
+    = link_to "uncheck all", '', :id => 'uncheck_all'
+    |
+    = submit_tag "Delete all checked"
+
+= will_paginate @comments
+
+- content_for :javascript_ready do
+  $('#check_all').click(function(){
+  $('#comments_table :checkbox').attr('checked', true);
+  return false;
+  });
+  $('#uncheck_all').click(function(){
+  $('#comments_table :checkbox').attr('checked', false);
+  return false;
+  });
+  

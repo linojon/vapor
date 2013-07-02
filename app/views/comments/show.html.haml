@@ -1,0 +1,27 @@
+- title "Comment"
+
+%p
+  %strong Title:
+  = @comment.title
+%p
+  %strong Body:
+  = @comment.body
+%p
+  %strong Author:
+  = @comment.author
+%p
+  %strong Status:
+  = @comment.status
+%p
+  %strong Anonymous:
+  = @comment.anonymous
+%p
+  %strong Post:
+  = @comment.posting_id
+
+%p
+  = link_to "Edit", edit_comment_path(@comment)
+  |
+  = link_to "Destroy", @comment, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", comments_path

@@ -1,0 +1,11 @@
+%h2
+  New Comment
+= simple_form_for [@posting, @posting.comments.build(:title => @posting.title)] do |form|
+  = form.input :author, :label => 'Name'
+  = form.input :title, :input_html => { :style => "width:75%" }
+  = form.input :body, :input_html => { :rows => 5, :style => "width:75%" }, :label => 'Comment', :hint => 'markdown formatting permitted'
+  =# show_simple_captcha :label => "Verification"
+  .input.string
+    = form.label "What's seven pluz two?"
+    = text_field_tag :math  
+  = form.button :submit

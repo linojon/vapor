@@ -1,0 +1,23 @@
+- title "Postings"
+
+%table
+  %tr
+    %th Title
+    %th Summary
+    %th Status
+    %th Body
+    %th Counter
+    %th User
+  - for posting in @postings
+    %tr
+      %td= posting.title
+      %td= posting.summary
+      %td= posting.status
+      %td= posting.body
+      %td= posting.counter
+      %td= posting.user_id
+      %td= link_to 'Show', posting
+      %td= link_to 'Edit', edit_posting_path(posting)
+      %td= link_to 'Destroy', posting, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Posting", new_posting_path

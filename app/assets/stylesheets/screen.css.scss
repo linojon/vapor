@@ -1,0 +1,224 @@
+/*
+ *= require_self
+ */
+
+@import "compass";
+@import "sassy-buttons";
+@include reset-html5;
+
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+@import "blueprint/form";
+@import "blueprint/typography";
+
+// Combine the partials into a single screen stylesheet.
+@import "partials/page";
+@import "partials/form";
+@import "partials/two_col";
+@import "partials/simple_form";
+
+@import "formtastic";
+@import "formtastic_changes";
+
+//----
+
+#container {
+  margin-left: 0; // flush left
+  color:#445A65;
+}
+
+a {
+  @include hover-link;
+  @include link-colors( #999, #445165, #999, #999, #999);
+}
+  
+nav {
+  line-height: 1.5em;
+  ul {
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h5 {
+  color:#445A65;
+}
+
+h1 {
+  font-size: 120%;
+  margin-bottom: 1em;
+}
+
+#container > header {
+  background:url("vapor-banner-page.jpg") no-repeat scroll 0 0 #FFFFFF;
+  height:80px;
+  margin-bottom: 3em;
+  nav {
+    @include horizontal-list;
+    float: right;
+    text-align: right;
+  }
+  .home_link {
+    display: block;
+    float: left;
+    width: 400px;
+    height: 200px;
+  }
+} 
+
+pre {
+  overflow: auto;
+  margin: 0 0 1em 0;
+  padding: 10px;
+  background-color: #DFDFDF;
+  border: 2px solid #8FAA34;
+  clear: both;
+  font-size: 80%;
+  strong {
+    color: brown;
+  }
+}
+
+body#admin #container { //let admin tables be wider than the container
+  overflow: visible;
+}
+
+#frontpage {
+  #container > header {
+    background:url("vapor-banner.jpg") no-repeat scroll 0 0 #FFFFFF;
+    height:245px;
+  }
+  article {
+    #content {
+      margin-bottom: 2em;
+      //@include column(15);
+      p {
+        @include prepend(1);
+        color: #333;
+      }
+      h2 {
+          font-size: 1.5em; // 18px
+          line-height: 1.3em; // 22px
+          margin-bottom: 0.5em;
+      }
+      clear: right; //float problem when article above is not tall enough
+    }
+    header {
+      //@include column(5,true);
+      float: right;
+      text-align: right;
+      font-size: 80%;
+      width: 130px;
+    }
+  }
+}
+
+aside {
+  @include no-bullets;
+  // enlarge current items (no link), others are normal
+  nav {
+    li {
+      font-size: 150%;
+      a {
+        font-size: 75%;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #eee;
+  margin: 1em 0;
+  nav {
+    text-align: right;
+  }
+}
+
+.pagination {
+  clear: both;
+  text-align: center;
+  > * {
+    padding: 0 0.5em;
+  }
+  span {
+    color: #999;
+  }
+  span.disabled {
+    color: #fff;
+  }
+  em {
+    font-style: normal;
+    font-weight: bold;
+  }
+}
+
+article {
+  font-size: 110%;
+  hgroup {
+    border-color: #445A65;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    h1 {
+      font-size: 200%;
+    }
+    details {
+      float: right;
+      text-align: right;
+      margin: 0 0 2em 2em;
+      padding-left: 1em;
+      border-left: solid 1px #ddd;
+      font-size: 80%;
+    }
+    .summary {
+      font-style: italic;
+      padding: 1em 2em 0.5em;
+    }
+  }
+  nav {
+    text-align: right;
+  }
+}
+
+#flash_notice {
+  font-size: 150%;
+  margin:0 0 1em; 
+  color: orange;
+  text-align: center;
+  background: #eee;
+}
+
+#comments {
+  border-top: solid 2px #445a65;
+  padding: 1em 0;
+  
+  article {
+    padding: 2em 1em 1em 1em;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0;
+    
+    h1 {
+      font-weight: bold;
+    }
+    details {
+      float: right;
+      font-size: 80%;
+      text-align: right;
+      padding-bottom: 0 1em 1em 0;
+    }
+    .body {
+      padding-left: 1em;
+    }
+  }
+  article.admin {
+    background-color: #eee;
+  }
+}

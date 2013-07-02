@@ -1,0 +1,13 @@
+%article{ :class => (comment.author=='admin' ? 'admin' : nil) }
+  %details
+    by <strong>#{comment.author}</strong> on #{comment.created_at.strftime("%b %d, %Y")}
+    - if logged_in?
+      %nav
+        = link_to "Edit", edit_posting_comment_path(@posting, comment)
+        |
+        = link_to "Delete", [@posting, comment], :confirm => 'Are you sure?', :method => :delete
+        comment
+  %h1= (comment.title==comment.posting.title) ? '>>' : comment.title
+  = highlight( sanitized_markdown(comment.body), @search )
+  
+  

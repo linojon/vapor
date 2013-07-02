@@ -1,0 +1,16 @@
+- body_id 'frontpage'
+- if @category.present?
+  - title "#{@category} postings"
+- elsif @search.present?
+  - title "search: #{@search}"
+- else
+  - title "postings", show=false
+= render @postings
+= will_paginate @postings
+- if logged_in?
+  %nav
+    = link_to "New posting", new_posting_path
+-# homepage-only
+- content_for :aside do
+  = image_tag "gotcha.gif", style: "padding-top: 25px"
+  

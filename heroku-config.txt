@@ -1,0 +1,11 @@
+APP_NAME=vaporbase
+COMMIT_HASH=19149d9
+CONSOLE_AUTH=app319177:xqj8coxzTo_oOxN9mt7f
+DATABASE_URL=postgres://zwroglcsatrykw:uQ0TRuZMjv3E_24tlrcmqETfdg@ec2-54-243-227-4.compute-1.amazonaws.com:5432/d9f3pa0qn23e7u
+HEROKU_POSTGRESQL_VIOLET_URL=postgres://zwroglcsatrykw:uQ0TRuZMjv3E_24tlrcmqETfdg@ec2-54-243-227-4.compute-1.amazonaws.com:5432/d9f3pa0qn23e7u
+LAST_GIT_BY=jonathan@parkerhill.com
+PGBACKUPS_URL=https://1542:95rn5atkzqcgl3g52i0bn8ddu@pgbackups.heroku.com/client
+RACK_ENV=production
+SHARED_DATABASE_URL=postgres://zwroglcsatrykw:uQ0TRuZMjv3E_24tlrcmqETfdg@ec2-54-243-227-4.compute-1.amazonaws.com:5432/d9f3pa0qn23e7u
+STACK=bamboo-ree-1.8.7
+URL=vaporbase.heroku.com

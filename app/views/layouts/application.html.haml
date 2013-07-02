@@ -1,0 +1,37 @@
+!!!
+%html.no-js
+  
+  %head
+    %title
+      = yield(:title) || "Vaporbase"
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    = stylesheet_link_tag 'screen', :media => 'screen, projection'
+    = stylesheet_link_tag 'print', :media => 'print'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'ie', :media => 'screen, projection'
+    -# = stylesheet_link_tag 'formtastic', 'compiled/formtastic_changes', :media => 'screen, projection'
+    = javascript_include_tag :application
+    = render "layouts/html5"
+    =# include_tiny_mce_if_needed
+    = yield :javascript_includes
+    %script
+      = yield :javascripts
+      $(document).ready(function(){
+      = yield :javascript_ready 
+      = yield :javascript_ready_last
+      });
+    = csrf_meta_tag
+    
+    = yield(:head)
+  
+  %body.two-col{ :id => yield(:body_id).blank? ? nil : yield(:body_id) }
+    #container    
+      = render 'layouts/header'
+      =# render 'layouts/aside'      
+      %section
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}"
+        - if show_title?
+          %h1= yield(:title)    
+        = yield 
+      = render 'layouts/footer'   
